@@ -1,0 +1,124 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  {% block meta %}
+  <!-- Required meta tags -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% endblock %}
+
+  {% block extra_meta %}
+  {% endblock %}
+
+  {% block corecss %}
+  <!-- Boostrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Google Fonts: Comfortaa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <!-- Link to base.css file -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
+
+  {% block extra_css %}
+  {% endblock %}
+
+  {% block corejs %}
+  <!-- Bootsrap JS adn Popper links -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+  </script>
+  <!-- Font Awsome kit code -->
+  <script src="https://kit.fontawesome.com/7c1ff51b02.js" crossorigin="anonymous"></script>
+  {% endblock %}
+
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>Coiling Clay</title>
+</head>
+
+<body>
+  <header class="container-fluid fixed-top">
+    <div id="topnav" class="row pt-lg-2 d-flex">
+      <div class="col-12 my-auto py-1 py-lg-0">
+        <a href="{% url 'home' %}" class="nav-link main-logo-link">
+          <h1 class="logo logo-font my-0 text-center pt-2"><strong>Coiling Clay</strong></h1>
+        </a>
+      </div>
+      <div class="row">
+        <nav class="navbar col-6">
+          {% include 'includes/nav.html' %}
+        </nav>
+        <div class="col-6">
+          <ul class="list-inline list-unstyled text-center float-end pb-2 my-0">
+            <li class="list-inline-item pe-3 d-none d-md-inline-block">
+              <div class="dropdown">
+                <a class="text-black account-link" href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="text-center"><i class="fa-solid fa-user fa-lg"></i></div>
+                  <p>My Account</p>
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                    <li><a href="#" class="dropdown-item">Product Management</a></li>
+                  {% endif %}
+                    <li><a href="#" class="dropdown-item">My Profile</a></li>
+                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                  {% else %}
+                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                  {% endif %}
+                </ul>
+              </div>
+            </li>
+            <li class="list-inline-item d-inline-block">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                <div class="text-center">
+                  <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                    $0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <div>
+    <footer class="text-center">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        © 2024 Copyright:
+        <a class="text-body" href="#">BinaryBeans</a>
+        <!-- Copyright -->
+
+        <!-- Contact -->
+        <p>Contact Us at: BinaryBeans@gmail.com</p>
+        <!-- Contact -->
+
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

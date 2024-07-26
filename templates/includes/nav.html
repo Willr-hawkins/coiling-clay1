@@ -1,0 +1,52 @@
+<button class="navbar-toggler pb-lg-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span><strong>Menu</strong></span>
+  </button>
+  <div class="offcanvas offcanvas-top h-auto" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <form id="search-form" class="d-none d-md-flex mt-3" method="GET" action="#">
+          <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-grow-1 pe-3">
+        <li class="nav-item text-center">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+          <li class="nav-item dropdown text-center">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+              </a>
+              <ul class="dropdown-menu text-center">
+              <li><a class="dropdown-item fs-4" href="#">Action</a></li>
+              <li><a class="dropdown-item fs-4" href="#">Another action</a></li>
+              <li><a class="dropdown-item fs-4" href="#">Something else here</a></li>
+              </ul>
+          </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Reviews</a>
+        </li>
+        <li class="nav-item d-md-none">
+          <div class="dropdown">
+            <a class="nav-link" href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
+              <p class="text-center">My Account</p>
+            </a>
+          
+            <ul class="dropdown-menu text-center" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+                <li><a href="#" class="dropdown-item">Product Management</a></li>
+              {% endif %}
+                <li><a href="#" class="dropdown-item">My Profile</a></li>
+                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+              {% else %}
+                <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

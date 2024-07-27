@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(lzv=zy6zscgnz(j&%7dcalqbyojq*34$c9z+)+j_^zoxyvwqd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-willrhawkin-coilingclay-cesv1ax1ov5.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-willrhawkin-coilingclay-8tojb3f8i4z.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [

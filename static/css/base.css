@@ -20,6 +20,10 @@ body {
 /* Footer */
 footer {
     background-color: #A39B8B;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 /* Footer */
 
@@ -93,6 +97,14 @@ a.dropdown-item:hover {
     height: 350px;
 }
 /* Home page */
+
+/* products page */
+#products {
+    padding-top: 150px;
+    height: 991px;
+}
+
+/* products page */
 
 /* tablet sized screeens */
 @media (max-width: 991px) {

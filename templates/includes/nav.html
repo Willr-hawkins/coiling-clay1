@@ -3,8 +3,8 @@
   </button>
   <div class="offcanvas offcanvas-top h-auto" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
-      <form id="search-form" class="d-none d-md-flex mt-3" method="GET" action="#">
-          <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+      <form id="search-form" class="d-none d-md-flex mt-3" method="GET" action="{% url 'products' %}">
+          <input class="form-control me-2" type="text" name="q" placeholder="Search">
           <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

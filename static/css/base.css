@@ -120,10 +120,14 @@ a.dropdown-item:hover {
 .card:hover {
     transform: scale(1.05);
 }
-
-
 /* products page */
 
+/* Product Detail page */
+#product_detail {
+    padding-top: 150px;
+    height: auto;
+    background-color: #F6F5F4;
+}
 /* tablet sized screeens */
 @media (max-width: 991px) {
     .offcanvas {

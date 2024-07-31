@@ -6,24 +6,16 @@
     <div class="row">
         <div class="col mt-3">
             <h2 class="text-center">Products</h2>
-            <div class="dropdown-center">
-                <a class="btn btn-secondary float-md-end me-5 mt-3 text-capatilize" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {% if current_sorting is None %}
-                        Sort Products
-                    {% else %}
-                        {{ current_sorting }}
-                    {% endif %}
-                </a>
-                
-                <ul class="dropdown-menu">
-                    {% if current_sorting is not None %}
-                    <li><a class="dropdown-item" href="{% url 'products' %}">Defualt</a></li>
-                    {% endif %}
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price | Low to High</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price | High to Low</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Rating | High to Low</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=asc">Rating | Low to High</a></li>
-                </ul>
+            <div class="sort-select-wrapper float-end pe-4">
+                <select id="sort-selector" class="custom-select rounded-2">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (Low to High)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (High to Low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (Low to High)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (High to Low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                </select>
             </div>
             
         </div>
@@ -67,3 +59,29 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var selector = document.getElementById('sort-selector');
+
+            selector.addEventListener('change', function() {
+                var selectedVal = this.value;
+                var currentUrl = new URL(window.location);
+
+                if (selectedVal != "reset") {
+                    var sort = selectedVal.split("_")[0];
+                    var direction = selectedVal.split("_")[1];
+
+                    currentUrl.searchParams.set("sort", sort);
+                    currentUrl.searchParams.set("direction", direction);
+                } else {
+                    currentUrl.searchParams.delete("sort");
+                    currentUrl.searchParams.delete("direction");
+                }
+
+                window.location.replace(currentUrl);
+            });
+        });
+    </script>
+{% endblock %}

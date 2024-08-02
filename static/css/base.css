@@ -7,6 +7,16 @@ body {
     color: #3D3D3D;
 }
 
+#content {
+    padding-bottom: 100px;
+}
+
+.btn-outline-black {
+    background-color: #F6F5F4;
+    color: #3D3D3D !important;
+    border: 1px solid black;
+}
+
 /* Header */
 .logo {
     font-weight: 700;
@@ -107,7 +117,7 @@ a.dropdown-item:hover {
 /* products page */
 #products {
     padding-top: 150px;
-    height: auto;
+    min-height: 100vh;
     background-color: #F6F5F4;
 }
 
@@ -132,14 +142,25 @@ a.dropdown-item:hover {
 /* Product Detail page */
 #product_detail {
     padding-top: 150px;
-    height: auto;
     background-color: #F6F5F4;
+    min-height: 100vh;
+}
+
+#details_image {
+    width: 75%;
+    transition: none;
+}
+
+.card-img {
+    height: 450px;
+    object-fit: cover;
 }
 /* Product Detail Page */
 
 /* Cart Page */
 #cart {
     padding-top: 150px;
+    min-height: 100vh;
 }
 /* Cart Page */
 
@@ -162,6 +183,14 @@ a.dropdown-item:hover {
 
     .card-img-top {
         height: 25vh;
+    }
+
+    #product_detail{
+        padding-bottom: 50px;
+    }
+
+    #details_image {
+        width: 100%;
     }
 }
 
@@ -187,5 +216,9 @@ a.dropdown-item:hover {
 
     .card-img-top {
         height: 30vh;
+    }
+
+    #product_detail{
+        padding-bottom: 0%;
     }
 }

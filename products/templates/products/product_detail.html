@@ -4,15 +4,15 @@
 {% block content %}
 <div id="product_detail" class="container-fluid">
     <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-        <div class="image-container my-5">
+    <div class="col-12 col-lg-6 offset-lg-1">
+        <div id="details_image" class="card mt-md-5">
             <a href="{{ product.image_url }}" target="_blank">
-                <img class="img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                <img class="card-img" src="{{ product.image_url }}" alt="{{ product.name }}">
             </a>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-details-container mb-5 mt-md-5">
+    <div class="col-12 col-lg-4">
+        <div class="product-details-container mb-5 mt-5">
             <p class="mb-0">{{ product.name }}</p>
             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
             {% if product.rating %}
@@ -22,7 +22,28 @@
             {% endif %}
             <p class="mt-3">{{ product.description }}</p>
             <hr>
-            <button class="btn btn-success rounded-2 mt-2">Add To <i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-12">
+                        <p class="mt-3"><strong>Quantity:</strong></p>
+                        <div class="input-group">
+                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ prodcut.id }}" id="id_qty_{{ prodcut.id }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-2 mt-5">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <input class="btn btn-success rounded-2 mt-5" type="submit" value="Add to Cart">
+                </div>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
         </div>
     </div>
     </div>

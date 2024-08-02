@@ -68,6 +68,12 @@ a.dropdown-item:hover {
 /* Navbar */
 
 /* Home page */
+#shipping-message {
+    background-color: #50514F;
+    padding-top: 160px;
+    color: #F6F5F4;
+}
+
 .hero {
     background: url('../media/homepage-background-image.jpg') no-repeat center center;
     background-size: cover;
@@ -129,6 +135,14 @@ a.dropdown-item:hover {
     height: auto;
     background-color: #F6F5F4;
 }
+/* Product Detail Page */
+
+/* Cart Page */
+#cart {
+    padding-top: 150px;
+}
+/* Cart Page */
+
 /* tablet sized screeens */
 @media (max-width: 991px) {
     .offcanvas {

@@ -155,6 +155,11 @@ a.dropdown-item:hover {
     height: 450px;
     object-fit: cover;
 }
+
+.decrement-qty,
+.increment-qty {
+    background-color: #A39B8B;
+}
 /* Product Detail Page */
 
 /* Cart Page */

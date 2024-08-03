@@ -167,6 +167,11 @@ a.dropdown-item:hover {
     padding-top: 150px;
     min-height: 100vh;
 }
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /* Cart Page */
 
 /* tablet sized screeens */

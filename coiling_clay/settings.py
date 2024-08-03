@@ -159,7 +159,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Calculate dilivery costs
 FREE_SHIPPING_THRESHOLD = 25
-STANDARD_SHIPPING_PERCENTAGE = 12
+STANDARD_SHIPPING_PRICE = 7.95
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

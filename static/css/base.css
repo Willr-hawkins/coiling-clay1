@@ -75,6 +75,10 @@ footer {
 a.dropdown-item:hover {
     background-color: #F6F5F4;
 }
+
+#profile-dropdown {
+    border: 1px solid #50514F;
+}
 /* Navbar */
 
 /* Home page */

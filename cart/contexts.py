@@ -37,7 +37,10 @@ def cart_contents(request):
         'shipping': shipping,
         'free_shipping_delta': free_shipping_delta,
         'free_shipping_threshold': settings.FREE_SHIPPING_THRESHOLD,
-        'grand_total': grand_total,
     }
+
+    # Adds grand_total to the context only when there are items in the cart.
+    if cart_items:
+        context['grand_total'] = grand_total
 
     return context

@@ -39,7 +39,8 @@ def cart_contents(request):
         'free_shipping_threshold': settings.FREE_SHIPPING_THRESHOLD,
     }
 
-    # Adds grand_total to the context only when there are items in the cart.
+    # Adds grand_total to the context only when there are items in the cart,
+    # so that the cart displays as £0.00 when empty. 
     if cart_items:
         context['grand_total'] = grand_total
 

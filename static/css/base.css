@@ -25,7 +25,6 @@ body {
 .account-link {
     text-decoration: none;
 }
-/* Header */
 
 /* Footer */
 footer {
@@ -35,7 +34,23 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* Footer */
+
+/* Message Container */
+.message-container {
+    position: fixed;
+    top: 130px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+/* Toasts */
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* Navbar */
 #topnav, .navbar {
@@ -79,7 +94,6 @@ a.dropdown-item:hover {
 #profile-dropdown {
     border: 1px solid #50514F;
 }
-/* Navbar */
 
 /* Home page */
 #shipping-message {
@@ -116,7 +130,6 @@ a.dropdown-item:hover {
 .img-fluid {
     height: 350px;
 }
-/* Home page */
 
 /* products page */
 #products {
@@ -141,7 +154,6 @@ a.dropdown-item:hover {
 .card:hover {
     transform: scale(1.05);
 }
-/* products page */
 
 /* Product Detail page */
 #product_detail {
@@ -164,7 +176,6 @@ a.dropdown-item:hover {
 .increment-qty {
     background-color: #A39B8B;
 }
-/* Product Detail Page */
 
 /* Cart Page */
 #cart {
@@ -176,7 +187,6 @@ a.dropdown-item:hover {
 .remove-item {
     cursor: pointer;
 }
-/* Cart Page */
 
 /* tablet sized screeens */
 @media (max-width: 991px) {

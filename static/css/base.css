@@ -17,6 +17,15 @@ body {
     border: 1px solid black;
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 /* Header */
 .logo {
     font-weight: 700;
@@ -33,23 +42,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-}
-
-/* Message Container */
-.message-container {
-    position: fixed;
-    top: 130px;
-    right: 15px;
-    z-index: 9999999999;
-}
-
-/* Toasts */
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
 }
 
 /* Navbar */
@@ -186,6 +178,34 @@ a.dropdown-item:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+#checkout_btn {
+    background-color: #A39B8B;
+}
+
+/* Message Container */
+.message-container {
+    position: fixed;
+    top: 130px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+/* Toasts */
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 3px;
+}
+
+.bag-notification-wrapper {
+    min-height: 100px;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* tablet sized screeens */

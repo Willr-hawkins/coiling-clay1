@@ -1,9 +1,51 @@
 #checkout {
-    background: url('static/media/homepage_background_image.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #F6F5F4;
     margin-top: 130px;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+    border-radius: 8px;
+}
+
+#payment-form .form-control,
+#card-element {
+    border: 1px solid #000;
 }
 
 .form-group {
     margin-bottom: 10px;
+}
+
+#submit-button {
+    background-color: #A39B8B;
+}
+
+/* Stripe Styles */
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
 }

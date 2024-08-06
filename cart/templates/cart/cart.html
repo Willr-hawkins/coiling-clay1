@@ -29,7 +29,9 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid object-fit-cover rounded" src="{{ item.product.image_url }}">
+                                        <a href="{% url 'product_detail' item.product.id %}">
+                                            <img class="img-fluid object-fit-cover rounded" src="{{ item.product.image_url }}">
+                                        </a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -92,7 +94,7 @@
                                         </span>
                                         <span>Keep Shopping</span>
                                     </a>
-                                    <a id="checkout_btn" href="" class="btn rounded-2 btn-lg">
+                                    <a id="checkout_btn" href="{% url 'checkout' %}" class="btn rounded-2 btn-lg">
                                         <span>Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>

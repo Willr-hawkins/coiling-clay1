@@ -184,6 +184,13 @@ a.dropdown-item:hover {
     background-color: #A39B8B;
 }
 
+/* Checkout page */
+#checkout {
+    background: url('../media/homepage-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-top: 130px;
+}
+
 /* Message Container */
 .message-container {
     position: fixed;

@@ -173,6 +173,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 FREE_SHIPPING_THRESHOLD = 25
 STANDARD_SHIPPING_PRICE = 7.95
 
+# Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

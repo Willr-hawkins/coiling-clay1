@@ -1,5 +1,6 @@
 #checkout {
     background-color: #F6F5F4;
+    min-height: 100vh;
     margin-top: 130px;
 }
 
@@ -48,4 +49,16 @@
 
 .stripe-style-input::placeholder {
     color: #aab7c4;
+}
+
+/* Success Page */
+
+#checkout-success {
+  background-color: #F6F5F4;
+  min-height: 100vh;
+  margin-top: 130px;
+}
+
+#return-home {
+  background-color: #A39B8B;
 }

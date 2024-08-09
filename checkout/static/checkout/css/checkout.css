@@ -23,6 +23,16 @@
     background-color: #A39B8B;
 }
 
+select,
+select option {
+  color: #3D3D3D;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 /* Stripe Styles */
 .StripeElement,
 .stripe-style-input {

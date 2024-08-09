@@ -7,6 +7,7 @@ body {
     color: #3D3D3D;
 }
 
+
 #content {
     padding-bottom: 100px;
 }
@@ -85,6 +86,10 @@ a.dropdown-item:hover {
 
 #profile-dropdown {
     border: 1px solid #50514F;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
 }
 
 /* Home page */
@@ -207,6 +212,78 @@ a.dropdown-item:hover {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Profile page */
+
+#profile {
+    min-height: 100vh;
+}
+
+
+/* allauth */
+#accounts {
+    background: url('../media/cream-set-of-4-plates.jpg') no-repeat center center;
+    background-size: cover;
+    height: 991px;
+    padding-top: 160px !important;
+}
+
+#id-remember {
+    margin-top: 5px;
+}
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    font-weight: bold;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    margin-top: 10px;
+}
+
+.form-check-label {
+    margin-top: 8px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #A39B8B;
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    transition: 0.3s;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    transform: scale(1.15);
+    background-color: #6c757d;
+    color: #F6F5F4;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
 
 /* tablet sized screeens */
 @media (max-width: 991px) {

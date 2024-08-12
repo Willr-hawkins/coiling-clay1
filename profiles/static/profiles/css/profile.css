@@ -38,3 +38,8 @@
     background-color: #6c757d;
     color: #F6F5F4;
 }
+
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}

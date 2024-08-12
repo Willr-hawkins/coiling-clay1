@@ -171,12 +171,21 @@
                     </div>
                 </div>
             </div>
-            <a href="{% url 'home' %}" class="btn rounded-2 my-3" id="return-home">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="font-weight-bold">Back To Homepage</span>
-            </a>
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn rounded-2 my-3" id="return-home">
+                    <span class="icon">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="font-weight-bold">Back To Profile</span>
+                </a>
+            {% else %}
+                <a href="{% url 'home' %}" class="btn rounded-2 my-3" id="return-home">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="font-weight-bold">Back To Homepage</span>
+                </a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

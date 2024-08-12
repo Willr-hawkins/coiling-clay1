@@ -1,3 +1,40 @@
 #profile {
     padding-top: 160px;
+    background-color: #F6F5F4
+}
+
+#profile-update-form input {
+    border-color: #000;
+    color: #3D3D3D;
+    margin-top: 10px;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+#profile-update-form select {
+    border-color: #000;
+    margin-top: 10px;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+.update-profile-btn {
+    background-color: #A39B8B;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.update-profile-btn:hover {
+    transform: scale(1.05);
+    background-color: #6c757d;
+    color: #F6F5F4;
 }

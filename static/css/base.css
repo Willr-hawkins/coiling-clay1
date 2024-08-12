@@ -111,6 +111,14 @@ input[name='q']::placeholder {
     margin-left: 150px;
     font-size: larger;
     font-weight: bolder;
+
+    transition: 0.3s;
+}
+
+.shop-now-button:hover {	
+    transform: scale(1.15);
+    background-color: #6c757d;
+    color: #F6F5F4;
 }
 
 .about {

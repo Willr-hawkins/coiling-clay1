@@ -222,11 +222,25 @@ input[name='q']::placeholder {
 }
 
 /* Profile page */
-
 #profile {
     min-height: 100vh;
 }
 
+/* Managment page */
+#Managment {
+    padding-top: 160px;
+    min-height: 100vh;
+    background-color: #F6F5F4;
+}
+
+#add_product_btn {
+    background-color: #A39B8B;
+    font-weight: bold;
+}
+
+#add_product_form label {
+    margin-top: 10px;
+}
 
 /* allauth */
 #accounts {

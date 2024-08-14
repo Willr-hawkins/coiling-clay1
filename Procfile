@@ -1,0 +1,1 @@
+web: gunicorn coiling_clay.wsgi:application

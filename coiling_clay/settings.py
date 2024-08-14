@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(lzv=zy6zscgnz(j&%7dcalqbyojq*34$c9z+)+j_^zoxyvwqd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['coiling-clay.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['coiling-clay.herokuapp.com', '8000-willrhawkin-coilingclay-8tojb3f8i4z.ws.codeinstitute-ide.net']
 
 
 # Application definition

@@ -244,7 +244,7 @@ input[name='q']::placeholder {
 
 /* allauth */
 #accounts {
-    background: url('../media/cream-set-of-4-plates.jpg') no-repeat center center;
+    background: url('/media/cream-set-of-4-plates.jpg') no-repeat center center;
     background-size: cover;
     height: 991px;
     padding-top: 160px !important;

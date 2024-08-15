@@ -1,3 +1,4 @@
+{% load static %}
 <div class="toast custom-toast rounded-2 border-top-0" role="alert" aria-live="assertive" aria-atomic="true" autohide="false">
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header" style="background-color: #F6F5F4;">
@@ -20,7 +21,7 @@
                 {% if item.product.image %}
                   <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                 {% else %}
-                  <img class="w-100" src="/media/noimage.png" alt="">
+                  <img class="w-100" src="{% get_media_prefix %}noimage.png" alt="">
                 {% endif %}
               </div>
               <div class="col-9">

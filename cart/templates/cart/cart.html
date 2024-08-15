@@ -35,7 +35,7 @@
                                             </a>
                                         {% else %}
                                             <a href="{% url 'product_detail' item.product.id %}">
-                                                <img class="img-fluid object-fit-cover rounded" src="/static/media/noimage.png" alt="{{ item.product.name }}">
+                                                <img class="img-fluid object-fit-cover rounded" src="{% get_media_prefix %}noimage.png" alt="{{ item.product.name }}">
                                             </a>
                                         {% endif %}
                                     </td>

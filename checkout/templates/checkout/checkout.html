@@ -100,13 +100,13 @@
                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                         </fieldset>
                         <div class="submit-button text-right mt-5 mb-2 px-3">
-                            <a href="{% url 'cart' %}" class="btn btn-outline-black rounded-2 my-0">
+                            <a id="adjust-cart-btn" href="{% url 'cart' %}" class="btn btn-outline-black rounded-2 my-0">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="font-weight-bold">Adjust Cart</span>
                             </a>
-                            <button id="submit-button" class="btn rounded-2 my-0">
+                            <button id="submit-button" class="btn rounded-2">
                                 <span class="font-weight-bold">Complete Order</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>

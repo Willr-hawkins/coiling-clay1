@@ -197,6 +197,10 @@ input[name='q']::placeholder {
     background-color: #A39B8B;
 }
 
+#cart-img {
+    max-width: 230px;
+}
+
 /* Message Container */
 .message-container {
     position: fixed;
@@ -387,7 +391,8 @@ input[name='q']::placeholder {
 
     .shop-now-button {
         margin-left: 10px;
-        width: 150px;
+        width: 200px;
+        font-size: large;
     }
 
     .about-content {
@@ -401,5 +406,24 @@ input[name='q']::placeholder {
 
     #product_detail{
         padding-bottom: 0%;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    #keep-shopping {
+        margin-top: 10px;
+        font-size: large;
+    }
+
+    #checkout_btn {
+        font-size: large;
+        margin-top: 10px;
+    }
+
+    #submit-button {
+        margin-top: 10px;
+        font-size: large;
     }
 }

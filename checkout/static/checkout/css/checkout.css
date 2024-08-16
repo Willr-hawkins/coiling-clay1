@@ -72,3 +72,11 @@ select option[value=""] {
 #return-home {
   background-color: #A39B8B;
 }
+
+/* Mobile sized screens */
+@media (max-width: 768px) {
+    #adjust-cart-btn {
+      margin-top: 10px;
+      font-size: large;
+  }
+}

@@ -221,7 +221,7 @@ if 'DEVELOPMENT' in os.environ:
     # Default email to send emails from.
     DEFAULT_FROM_EMAIL = 'CoilingClay@example.com'
 else:
-    EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'

@@ -379,6 +379,14 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* MailChimp Form */
+#mc_embed_signup {
+    background: #A39B8B;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+
 /* Mobile sized screens */
 @media (max-width: 768px) {
     .offcanvas {

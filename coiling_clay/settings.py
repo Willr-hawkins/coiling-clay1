@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', ')f!zpr^iuuj92512j34b@h#$o+wp4hqy2tvs%q9g8jp%5e&4kk')
+SECRET_KEY = os.environ.get('SECRET_KEY', ' ')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #'DEVELOPMENT' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['coiling-clay-33e330e1c084.herokuapp.com', '8000-willrhawkin-coilingclay-8tojb3f8i4z.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['coiling-clay-33e330e1c084.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -103,8 +103,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Allauth account signup/login settings
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -218,8 +216,18 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
-# Default email to send emails from.
-DEFAULT_FROM_EMAIL = 'CoilingClay@example.com'
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.email.backends.console.EmailBackend'
+    # Default email to send emails from.
+    DEFAULT_FROM_EMAIL = 'CoilingClay@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFUALT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

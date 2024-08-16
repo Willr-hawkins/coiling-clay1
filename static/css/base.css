@@ -39,11 +39,24 @@ body {
 /* Footer */
 footer {
     background-color: #A39B8B;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-top: 0;
+    padding-top: 0;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .footer-content > div {
+    flex: 1;
+    padding: 0 1rem;
+  }
 
 /* Navbar */
 #topnav, .navbar {
@@ -310,37 +323,6 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-
-/* tablet sized screeens */
-@media (max-width: 991px) {
-    .offcanvas {
-        margin-top: 100px;
-    }
-
-    #search-form {
-        width: 50%;
-    }
-
-    .shop-now-button {
-        margin-left: 50px;
-    }
-    .about-content {
-        line-height: 2rem;
-    }
-
-    .card-img-top {
-        height: 25vh;
-    }
-
-    #product_detail{
-        padding-bottom: 50px;
-    }
-
-    #details_image {
-        width: 100%;
-    }
-}
-
 /* Product Form */
 .btn-file {
     position: relative;
@@ -382,9 +364,54 @@ input[name='q']::placeholder {
 /* MailChimp Form */
 #mc_embed_signup {
     background: #A39B8B;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
+    clear: right;
+    font: 14px Comfortaa;
+    max-width: 700px;
+}
+
+#mc_embed_signup form {
+    padding-top: 10px;
+    margin: 0;
+}
+
+#mc-embedded-subscribe {
+    transition: 0.3s;
+}
+
+#mc-embedded-subscribe:hover {
+    transform: scale(1.05);
+}
+
+/* tablet sized screeens */
+@media (max-width: 991px) {
+    .offcanvas {
+        margin-top: 100px;
+    }
+
+    #search-form {
+        width: 50%;
+    }
+
+    .shop-now-button {
+        margin-left: 50px;
+    }
+    .about-content {
+        line-height: 2rem;
+    }
+
+    .card-img-top {
+        height: 25vh;
+    }
+
+    #product_detail{
+        padding-bottom: 50px;
+    }
+
+    #details_image {
+        width: 100%;
+    }
+
+    
 }
 
 /* Mobile sized screens */
@@ -434,4 +461,8 @@ input[name='q']::placeholder {
         margin-top: 10px;
         font-size: large;
     }
+
+    .footer-content {
+        flex-direction: column; 
+      }
 }

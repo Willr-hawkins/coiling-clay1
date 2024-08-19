@@ -195,6 +195,25 @@ input[name='q']::placeholder {
     background-color: #A39B8B;
 }
 
+.card-header {
+    font-family: 'Comfortaa', monospace;
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.review-btn {
+    background-color: #A39B8B;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.review-btn:hover {
+    transform: scale(1.05);
+    background-color: #6c757d;
+}
+
 /* Cart Page */
 #cart {
     padding-top: 150px;

@@ -91,6 +91,7 @@
                         <hr>
                         <p><strong>Review:</strong></p>
                         <p>{{ review.review_body }}</p>
+                        <a class="btn btn-delete btn-danger ms-2" href="{% url 'delete_review' review.id %}">Delete</a>
                     </div>
                 </div>
             {% endfor %}

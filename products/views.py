@@ -71,6 +71,7 @@ def product_detail(request, product_id):
             review.reviewer = request.user
             review.product = product
             review.save()
+            product.update_rating()
             messages.success(request, 'Successfully added review!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -85,6 +86,23 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+def delete_review(request, review_id):
+    """ A view so users can delete their reviews. """
+    review = get_object_or_404(Review, id=review_id, reviewer=request.user)
+    product = review.product
+
+    if request.method == 'POST':
+        review.delete()
+        product.update_rating()
+        messages.success(request, 'You have successfully delete your review.')
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    context = {
+        'review': review,
+    }
+
+    return render(request, 'products/delete_review.html', context)
 
 @login_required
 def add_product(request):

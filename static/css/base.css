@@ -214,6 +214,24 @@ input[name='q']::placeholder {
     background-color: #6c757d;
 }
 
+/* delete review page */
+#delete-review {
+    padding-top: 160px;
+    background: url('/media/cream-set-of-4-plates.jpg') no-repeat center center;
+    background-size: cover;
+    height: 991px;
+}
+
+.delete-review-btn {
+    background-color: #dc3545;
+    transition: 0.3s;
+}
+
+.delete-review-btn:hover {
+    transform: scale(1.1);
+    background-color: #dc3545;
+}
+
 /* Cart Page */
 #cart {
     padding-top: 150px;

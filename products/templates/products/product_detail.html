@@ -81,9 +81,9 @@
         <h3 class="ps-3 mb-3">Reviews</h3>
         <div class="col-12 col-md-6">
             {% for review in reviews %}
-                <div class="card my-4" style="width: 40rem;">
+                <div class="card my-4">
                     <div class="card-header fs-5">
-                        {{ review }}<h6 class="float-end">{{ review.review_date }}</h6>
+                        {{ review }}<h6 id="review-date" class="float-lg-end mt-2">{{ review.review_date }}</h6>
                     </div>
                     <div class="card-body">
                         <p><strong>Rating:</strong></p>
@@ -91,7 +91,33 @@
                         <hr>
                         <p><strong>Review:</strong></p>
                         <p>{{ review.review_body }}</p>
-                        <a class="btn btn-delete btn-danger ms-2" href="{% url 'delete_review' review.id %}">Delete</a>
+                        {% if user.is_authenticated and review.reviewer == user %}
+                            <a class="btn btn-delete btn-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                        {% elif user.is_authenticated and review.reviewer != user %}
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Comment
+                            </button>                          
+                        {% endif %}
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add a Comment</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form" method="POST" action="{% url 'add_comment' review.id %}">
+                                        {% csrf_token %}
+                                        {{ comment_form|crispy }}
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
@@ -105,9 +131,9 @@
                     {% if user.is_authenticated %}
                         <p><strong>Leaving review as:</strong> {{ user }}</p>
                         <p><strong>Reviewing:</strong> {{ product.name }}</p>
-                        <form class="form" method="POST">
+                        <form class="form" method="POST" action="{% url 'review' product.id %}">
                             {% csrf_token %}
-                            {{ form|crispy }}
+                            {{ review_form|crispy }}
                             <button type="submit" class="btn rounded-4 btn-outline-black btn-lg review-btn ms-2 mt-2">Submit</button>
                         </form>
                     {% else %}
@@ -126,4 +152,12 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
+    <script type="text/javascript">
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+        })
+    </script>
 {% endblock %}

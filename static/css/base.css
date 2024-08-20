@@ -448,7 +448,9 @@ input[name='q']::placeholder {
         width: 100%;
     }
 
-    
+    #review-date{
+        margin-top: 5px;
+    }
 }
 
 /* Mobile sized screens */

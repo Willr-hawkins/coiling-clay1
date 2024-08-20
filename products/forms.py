@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category, Review
+from .models import Product, Category, Review, Comments
 
 class ProductForm(forms.ModelForm):
 
@@ -26,3 +26,9 @@ class ReviewForm(forms.ModelForm):
         widgets = {
             'rating': forms.Select(choices=[(i, i) for i in range(1, 6)])
         }
+
+class CommentForm(forms.ModelForm):
+    """ Form for leaving a comment on a review. """
+    class Meta:
+        model = Comments
+        fields = ['comment_body']

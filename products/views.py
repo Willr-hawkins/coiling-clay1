@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm
+from .models import Product, Category, Review, Comments
+from .forms import ProductForm, ReviewForm, CommentForm
 
 # Create your views here.
 
@@ -62,12 +62,28 @@ def product_detail(request, product_id):
     """ A view to show an individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.filter(product=product) # To get all reviews for the specific product.
+    reviews = Review.objects.filter(product=product)  # To get all reviews for the specific product.
+
+    review_form = ReviewForm()
+    comment_form = CommentForm()
+
+    context = {
+        'product': product,
+        'review_form': review_form,
+        'comment_form': comment_form,
+        'reviews': reviews,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+def review(request, product_id):
+    """ A view to leave a review. """
+    product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
             review.reviewer = request.user
             review.product = product
             review.save()
@@ -77,15 +93,14 @@ def product_detail(request, product_id):
         else:
             messages.error(request, 'Failed to add review, please check your form is valid.')
     else:
-        form = ReviewForm()
-
+        review_form = ReviewForm()
+    
     context = {
         'product': product,
-        'form': form,
-        'reviews': reviews,
+        'review_form': review_form,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, 'products/product_detail.html, context')
 
 def delete_review(request, review_id):
     """ A view so users can delete their reviews. """
@@ -103,6 +118,32 @@ def delete_review(request, review_id):
     }
 
     return render(request, 'products/delete_review.html', context)
+
+@login_required
+def add_comment(request, review_id):
+    """ A view to allow users to add a comment to a review. """
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.review = review
+            comment.commenter = request.user
+            comment.save()
+            messages.success(request, 'Comment added successfully!')
+            return redirect(reverse('product_detail', args=[review.product.id]))
+        else:
+            messages.error(request, 'Failed to add comment. Please ensure the form is valid.')
+    else:
+        comment_form = CommentForm()
+
+    context = {
+        'comment_form': comment_form,
+        'review': review,
+    }
+
+    return render(request, 'products/product_detail.html', context)
 
 @login_required
 def add_product(request):
@@ -168,4 +209,3 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'Successfully deleted {product.name}!')
     return redirect(reverse('products'))
-

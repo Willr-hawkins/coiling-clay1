@@ -71,3 +71,17 @@ class Review(models.Model):
         super().delete(*args, **kwargs)
         product.update_rating()
 
+
+class Comments(models.Model):
+    """ A model to leave a comment on a review. """
+
+    review = models.ForeignKey(Review, null=False, blank=False, on_delete=models.CASCADE)
+    commenter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
+    comment_body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Comments'
+
+    def __str__(self):
+        return f'Commenet by {self.commenter}'

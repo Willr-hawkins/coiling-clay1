@@ -195,6 +195,7 @@ input[name='q']::placeholder {
     background-color: #A39B8B;
 }
 
+/* reviews */
 .card-header {
     font-family: 'Comfortaa', monospace;
     background-color: #A39B8B;
@@ -212,6 +213,28 @@ input[name='q']::placeholder {
 .review-btn:hover {
     transform: scale(1.05);
     background-color: #6c757d;
+}
+
+/* Comments */
+.comment-card {
+    width: 60%;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #CDD3D5;
+}
+.comment-body {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+.comment-date {
+    font-size: 0.7rem;
+    padding-top: 5px;
 }
 
 /* delete review page */
@@ -450,6 +473,10 @@ input[name='q']::placeholder {
 
     #review-date{
         margin-top: 5px;
+    }
+
+    .comment-card {
+        width: 75%;
     }
 }
 

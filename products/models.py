@@ -75,7 +75,7 @@ class Review(models.Model):
 class Comments(models.Model):
     """ A model to leave a comment on a review. """
 
-    review = models.ForeignKey(Review, null=False, blank=False, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, null=False, blank=False, on_delete=models.CASCADE, related_name='comments')
     commenter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
     comment_body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
@@ -84,4 +84,4 @@ class Comments(models.Model):
         verbose_name_plural = 'Comments'
 
     def __str__(self):
-        return f'Commenet by {self.commenter}'
+        return f"Comment by {self.commenter}"

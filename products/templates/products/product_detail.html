@@ -99,9 +99,9 @@
                             </button>                          
                         {% endif %}
                     </div>
-                    <hr class="text-muted" style="border: none; border-top: 2px dashed #000;">
-                    <h5 class="ps-3">Comments:</h5>
                     {% if review.comments.exists %}
+                        <hr class="text-muted" style="border: none; border-top: 2px dashed #000;">
+                        <h5 class="ps-3">Comments:</h5>
                         {% for comment in review.comments.all %}
                             <div class="card comment-card">
                                 <div class="card-body">
@@ -109,6 +109,9 @@
                                     <h6 class="comment-date">{{ comment.date }}</h6>
                                     <hr style="width: 70%;">
                                     <p class="commnet-body">{{ comment.comment_body }}</p>
+                                    {% if user.is_authenticated and comment.commenter == user %}
+                                        <a class="btn btn-delete btn-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endfor%}

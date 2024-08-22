@@ -62,7 +62,6 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-
 def product_detail(request, product_id):
     """ A view to show an individual product details """
 
@@ -81,6 +80,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+@login_required
 def review(request, product_id):
     """ A view to leave a review. """
     product = get_object_or_404(Product, pk=product_id)
@@ -107,6 +107,7 @@ def review(request, product_id):
 
     return render(request, 'products/product_detail.html, context')
 
+@login_required
 def delete_review(request, review_id):
     """ A view so users can delete their reviews. """
     review = get_object_or_404(Review, id=review_id, reviewer=request.user)
@@ -138,14 +139,7 @@ def add_comment(request, review_id):
             comment.save()
 
             # Send email to the reviewer
-            subject = render_to_string(
-                'products/comment_emails/comment_email_subject.txt',
-                {'review': review})
-            body = render_to_string(
-                'products/comment_emails/comment_email_body.txt', 
-                {'review': review})
-            customer_email = review.reviewer.email
-            send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [customer_email])
+            
 
             messages.success(request, 'Comment added successfully!')
             return redirect(reverse('product_detail', args=[review.product.id]))
@@ -160,6 +154,24 @@ def add_comment(request, review_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def delete_comment(request, comment_id):
+    """ A view to delete a comment from a review. """
+    comment = get_object_or_404(Comments, id=comment_id, commenter=request.user)
+    review = comment.review
+    product = review.product
+
+    if request.method == 'POST':
+        comment.delete()
+        messages.success(request, 'You have successfully deleted your comment.')
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    context = {
+        'comment': comment,
+    }
+
+    return render(request, 'products/delete_comment.html', context)
 
 @login_required
 def add_product(request):

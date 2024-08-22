@@ -139,7 +139,7 @@ def add_comment(request, review_id):
 
             # Send email to the reviewer
             subject = render_to_string(
-                'products/commnet_emails/comment_email_subject.txt',
+                'products/comment_emails/comment_email_subject.txt',
                 {'review': review})
             body = render_to_string(
                 'products/comment_emails/comment_email_body.txt', 

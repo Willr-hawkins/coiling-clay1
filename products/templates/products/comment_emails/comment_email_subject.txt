@@ -1,1 +1,1 @@
-Coiling Clay. New comment on your review for {{ review.product.name }}
+Coiling Clay: New comment on your review.

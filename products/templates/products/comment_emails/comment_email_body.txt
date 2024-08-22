@@ -1,0 +1,10 @@
+Hello {{ review.reviwer.get_full_name() }},
+
+You have recieved a comment on your review for the product {{ review.product.name }}.
+
+You can see the comment by going to the product page on our website,
+you can also reply to the commnet by using the reply button on their comment.
+
+Many Thanks,
+
+Coiling Clay

@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
+
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -131,6 +136,17 @@ def add_comment(request, review_id):
             comment.review = review
             comment.commenter = request.user
             comment.save()
+
+            # Send email to the reviewer
+            subject = render_to_string(
+                'products/commnet_emails/comment_email_subject.txt',
+                {'review': review})
+            body = render_to_string(
+                'products/comment_emails/comment_email_body.txt', 
+                {'review': review})
+            customer_email = review.reviewer.email
+            send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [customer_email])
+
             messages.success(request, 'Comment added successfully!')
             return redirect(reverse('product_detail', args=[review.product.id]))
         else:

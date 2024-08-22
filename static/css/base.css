@@ -14,7 +14,6 @@ body {
 
 .btn-outline-black {
     background-color: #F6F5F4;
-    color: #3D3D3D !important;
     border: 1px solid black;
 }
 
@@ -198,21 +197,23 @@ input[name='q']::placeholder {
 /* reviews */
 .card-header {
     font-family: 'Comfortaa', monospace;
-    background-color: #A39B8B;
-    color: #3D3D3D;
+    background-color: #626C66;
+    color: #D1D3C4;
     font-weight: bolder;
     font-size: 1.5rem;
 }
 
 .review-btn {
-    background-color: #A39B8B;
+    background-color: #626C66;
+    color: #D1D3C4;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .review-btn:hover {
     transform: scale(1.05);
-    background-color: #6c757d;
+    background-color: #A39B8B;
+    color: #3D3D3D;
 }
 
 /* Comments */
@@ -235,6 +236,43 @@ input[name='q']::placeholder {
 .comment-date {
     font-size: 0.7rem;
     padding-top: 5px;
+}
+
+.comment-btn {
+    background-color: #626C66;
+    color: #D1D3C4;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.comment-btn:hover {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transform: scale(1.05);
+}
+
+/* Comment modal pop-up */
+.modal-header {
+    background-color: #626C66;
+    color: #D1D3C4;
+}
+
+.modal-close-btn {
+    background-color: #D1D3C4;
+}
+
+.comment-form-btn {
+    background-color: #626C66;
+    color: #D1D3C4;
+    margin-top: 10px;
+    float: right;
+    transition: 0.3s;
+}
+
+.comment-form-btn:hover {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transform: scale(1.05);
 }
 
 /* delete review page */

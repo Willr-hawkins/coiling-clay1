@@ -1,4 +1,4 @@
-Hello {{ review.reviwer.get_full_name() }},
+Hello {{ review.reviwer }},
 
 You have recieved a comment on your review for the product {{ review.product.name }}.
 

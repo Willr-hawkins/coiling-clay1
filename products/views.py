@@ -139,7 +139,14 @@ def add_comment(request, review_id):
             comment.save()
 
             # Send email to the reviewer
-            
+            subject = render_to_string(
+                'products/commnet_emails/comment_email_subject.txt',
+                {'review': review})
+            body = render_to_string(
+                'products/comment_emails/comment_email_body.txt', 
+                {'review': review})
+            customer_email = review.reviewer.email
+            send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [customer_email])
 
             messages.success(request, 'Comment added successfully!')
             return redirect(reverse('product_detail', args=[review.product.id]))

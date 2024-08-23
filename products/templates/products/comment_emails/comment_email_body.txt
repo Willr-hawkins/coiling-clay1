@@ -5,8 +5,7 @@ You have recieved a comment on your review on the {{ review.product.name }}.
 Your review: 
 {{ review.review_body }}
 
-You can see the comment by going to the product page on our website,
-you can also reply to the commnet by using the reply button on their comment.
+You can see the comment by going to the product page on our website.
 
 Many Thanks,
 

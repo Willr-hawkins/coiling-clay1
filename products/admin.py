@@ -22,4 +22,3 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Review)
 admin.site.register(Comments)
-

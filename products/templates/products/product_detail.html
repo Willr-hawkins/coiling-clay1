@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% load humanize %}
+
 {% block content %}
 <div id="product_detail" class="container-fluid">
     <div class="row">
@@ -83,7 +85,7 @@
             {% for review in reviews %}
                 <div class="card my-4">
                     <div class="card-header fs-5">
-                        {{ review }}<h6 id="review-date" class="float-lg-end mt-2">{{ review.review_date }}</h6>
+                        {{ review }}<h6 id="review-date" class="float-lg-end mt-2">{{ review.review_date | naturaltime }}</h6>
                     </div>
                     <div class="card-body">
                         <p><strong>Rating:</strong></p>
@@ -106,7 +108,7 @@
                             <div class="card comment-card">
                                 <div class="card-body">
                                     <h6>{{ comment }}</h6>
-                                    <h6 class="comment-date">{{ comment.date }}</h6>
+                                    <h6 class="comment-date">{{ comment.date | naturaltime }}</h6>
                                     <hr style="width: 70%;">
                                     <p class="commnet-body">{{ comment.comment_body }}</p>
                                     {% if user.is_authenticated and comment.commenter == user %}

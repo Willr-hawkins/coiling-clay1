@@ -12,4 +12,5 @@ urlpatterns = [
     path('review/edit/<int:review_id>/', views.edit_review, name='edit_review'),
     path('add_comment/<int:review_id>/', views.add_comment, name='add_comment'),
     path('comment/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+    path('comment/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
 ]

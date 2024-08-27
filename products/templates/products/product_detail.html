@@ -114,6 +114,7 @@
                                     <p class="commnet-body">{{ comment.comment_body }}</p>
                                     {% if user.is_authenticated and comment.commenter == user %}
                                         <a class="btn btn-delete btn-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                                        <a class="btn comment-btn" href="{% url 'edit_comment' comment.id %}">Edit</a>
                                     {% endif %}
                                 </div>
                             </div>

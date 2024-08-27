@@ -297,7 +297,8 @@ input[name='q']::placeholder {
 }
 
 /* Edit review and comments page */
-#edit-review {
+#edit-review,
+#edit-comment {
     padding-top: 160px;
     background: url('/media/cream-set-of-4-plates.jpg') no-repeat center center;
     background-size: cover;

@@ -204,6 +204,31 @@ def delete_comment(request, comment_id):
     return render(request, 'products/delete_comment.html', context)
 
 @login_required
+def edit_comment(request, comment_id):
+    """ Edit comment if user is comment.commenter. """
+    comment = get_object_or_404(Comments, id=comment_id, commenter=request.user)
+    review = comment.review
+    product = review.product
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your comment has been updated successfully.')
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        form = CommentForm(instance=comment)
+
+    context = {
+        'comment': comment,
+        'review': review,
+        'product': product,
+        'form': form,
+    }
+
+    return render(request, 'products/edit_comment.html', context)
+
+@login_required
 def add_product(request):
     """ Add a product to the store. """
     if not request.user.is_superuser:

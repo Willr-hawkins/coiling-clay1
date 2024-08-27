@@ -12,6 +12,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category, Review, Comments
 from .forms import ProductForm, ReviewForm, CommentForm
 
+import random
+
 # Create your views here.
 
 def all_products(request):
@@ -66,16 +68,22 @@ def product_detail(request, product_id):
     """ A view to show an individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.filter(product=product)  # To get all reviews for the specific product.
+    # To get all reviews for the specific product.
+    reviews = Review.objects.filter(product=product)
+
+    #Get 4 random products from the same category as product.id
+    related_products = Product.objects.filter(category=product.category).exclude(id=product.id)
+    random_related_products = random.sample(list(related_products), min(len(related_products), 4))
 
     review_form = ReviewForm()
     comment_form = CommentForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'random_related_products': random_related_products,
         'review_form': review_form,
         'comment_form': comment_form,
-        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)

@@ -296,6 +296,14 @@ input[name='q']::placeholder {
     background-color: #dc3545;
 }
 
+/* Edit review and comments page */
+#edit-review {
+    padding-top: 160px;
+    background: url('/media/cream-set-of-4-plates.jpg') no-repeat center center;
+    background-size: cover;
+    height: 991px;
+}
+
 /* Cart Page */
 #cart {
     padding-top: 150px;

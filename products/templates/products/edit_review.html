@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="edit-review" class="container-fluid mt-5">
+    <div class="container">
+        <div class="col-12 col-md-6">
+            <div class="card my-4">
+                <div class="card-header text-center">
+                    Edit Review
+                </div>
+                <div class="card-body">
+                    <form class="form" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-success rounded-4 ms-2 mt-2">Update</button>
+                        <a class="btn btn-outline-black review-btn rounded-4 ms-3 mt-2" href="{% url 'product_detail' review.product.id %}">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

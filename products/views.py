@@ -109,7 +109,7 @@ def review(request, product_id):
 
 @login_required
 def delete_review(request, review_id):
-    """ A view so users can delete their reviews. """
+    """ Delete a review if user is review.reviewer. """
     review = get_object_or_404(Review, id=review_id, reviewer=request.user)
     product = review.product
 
@@ -124,6 +124,29 @@ def delete_review(request, review_id):
     }
 
     return render(request, 'products/delete_review.html', context)
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a review if user is review.reviewer. """
+    review = get_object_or_404(Review, id=review_id, reviewer=request.user)
+    product = review.product
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your review has been updated successfully.')
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        form = ReviewForm(instance=review)
+    
+    context = {
+        'review': review,
+        'product': product,
+        'form': form,
+    }
+
+    return render(request, 'products/edit_review.html', context)
 
 @login_required
 def add_comment(request, review_id):
@@ -164,7 +187,7 @@ def add_comment(request, review_id):
 
 @login_required
 def delete_comment(request, comment_id):
-    """ A view to delete a comment from a review. """
+    """ Delete a comment if user is comment.commenter. """
     comment = get_object_or_404(Comments, id=comment_id, commenter=request.user)
     review = comment.review
     product = review.product

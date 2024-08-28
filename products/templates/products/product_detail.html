@@ -90,11 +90,11 @@
                         <div class="card">
                             <div class="card border-0">
                                 {% if product.image %}
-                                    <a href="{% url 'product_detail' product.id %}">
+                                    <a href="{% url 'product_detail' related_product.id %}">
                                         <img class="card-img-top" src="{{ related_product.image_url }}" alt="{{ related_product.name }}">
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'product_detail' product.id %}">
+                                    <a href="{% url 'product_detail' related_product.id %}">
                                         <img class="card-img-top" src="{% get_media_prefix %}noimage.png" alt="{{ related_product.name }}">
                                     </a>
                                 {% endif %}
@@ -105,15 +105,15 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ related_product.price }}</p>
-                                            {% if product.rating %}
+                                            {% if related_product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ related_product.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a href="{% url 'edit_product' related_product.id %}">Edit</a> |
+                                                    <a class="text-danger" href="{% url 'delete_product' related_product.id %}">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>

@@ -348,9 +348,11 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* Profile page */
-#profile {
+/* Wishlists page */
+#wishlists {
     min-height: 100vh;
+    padding-top: 160px;
+    background-color: #F6F5F4;
 }
 
 /* Managment page */

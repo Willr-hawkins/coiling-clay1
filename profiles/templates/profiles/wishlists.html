@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="wishlists" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2>
+                    My Wishlists
+                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Add Wishlist
+                    </button>
+                </h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if wishlists %}
+                <ul>
+                  {% for wishlist in wishlists %}
+                    <li>{{ wishlist.wishlist_name }}</li>
+                  {% endfor %}
+                </ul>
+                {% else %}
+                    <p>You have no wishlists yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Wishlist form popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new wishlist</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Give your wishlist a name:</p>
+                    <form method="post" action="{% url 'create_wishlist' %}">
+                        {% csrf_token %}
+                        {{ wishlist_form|crispy }}
+                        <hr>
+                        <button type="submit" class="btn btn-primary float-end">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
+</script>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -31,3 +31,14 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-2 profile-form-input'
             self.fields[field].label = False
+
+class CreateWishlistForm(forms.ModelForm):
+    """ Create a wishlist with a chosen name. """
+    class Meta:
+        model = Wishlist
+        fields = ['wishlist_name']
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['wishlist_name'].label = ''
+        self.fields['wishlist_name'].widget.attrs.update({'placeholder': '.e.g. | Birthday Gifts'})

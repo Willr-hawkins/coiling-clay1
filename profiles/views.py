@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import UserProfile
-from .forms import UserProfileForm
+from .models import UserProfile, Wishlist
+from .forms import UserProfileForm, CreateWishlistForm
 
 from checkout.models import Order
 
@@ -43,6 +43,45 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+def user_wishlists(request):
+    """ 
+    Display a list of wishlists created if,
+    wishlist.user is the logged in user.
+    """
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    wishlists = Wishlist.objects.filter(user=user_profile)
+    wishlist_form = CreateWishlistForm()
+
+    template = 'profiles/wishlists.html'
+    context = {
+        'wishlists': wishlists,
+        'wishlist_form': wishlist_form,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def create_wishlist(request):
+    """ Display a form to create a wishlist. """
+
+    if request.method == 'POST':
+        wishlist_form = CreateWishlistForm(request.POST)
+        if wishlist_form.is_valid():
+            wishlist = wishlist_form.save(commit=False)
+            wishlist.user = request.user.userprofile
+            wishlist.save()
+            messages.success(request, 'Successfully created wishlist!')
+            return redirect(reverse('wishlists'))
+    else:
+        form = CreateWishlistForm()
+
+    template = 'profiles/wishlists.html'
+    context = {
+        'wishlist_form': wishlist_form,
     }
 
     return render(request, template, context)

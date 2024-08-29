@@ -194,6 +194,28 @@ input[name='q']::placeholder {
     background-color: #A39B8B;
 }
 
+#wishlistButton {
+    color: #3D3D3D;
+    transition: 0.3s;
+}
+
+#wishlistButton:hover {
+    color: #A39B8B;
+    transform: scale(1.10);
+}
+
+.wishlist-btn {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transform: scale(1.05);
+}
+
 /* reviews */
 .card-header {
     font-family: 'Comfortaa', monospace;
@@ -353,6 +375,30 @@ input[name='q']::placeholder {
     min-height: 100vh;
     padding-top: 160px;
     background-color: #F6F5F4;
+}
+
+#add-wishlist-btn {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transition: 0.3s;
+}
+
+#add-wishlist-btn:hover {
+    background-color: #6c757d;
+    color: #F6F5F4;
+    transform: scale(1.10);
+}
+
+.wishlist-enter {
+    background-color: #6c757d;
+    color: #D1D3C4;
+    transition: 0.3s;
+}
+
+.wishlist-enter:hover {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transform: scale(1.10);
 }
 
 /* Managment page */

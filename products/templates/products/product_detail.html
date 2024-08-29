@@ -22,7 +22,23 @@
         </div>
         <div class="col-12 col-lg-4">
             <div class="product-details-container mb-5 mt-5">
-                <p class="mb-0">{{ product.name }}</p>
+                <p class="mb-0">
+                    {{ product.name }}
+                    {% if request.user.is_authenticated %}
+                        <a type="button" class="ms-3" id="wishlistButton"><i class="fa-solid fa-bookmark"></i></a>
+                    {% endif %}
+                </p>
+                <form class="mt-1" action="{% url 'add_to_wishlist' product.id 0 %}" method="post" id="wishlistForm" style="display: none;">
+                    {% csrf_token %}
+                    <select name="wishlist_id" class="form-select" required>
+                        <option value="" selected disabled>Select a Wishlist</option>
+                        {% for wishlist in request.user.userprofile.wishlists.all %}
+                            <option value="{{ wishlist.id }}">{{ wishlist.wishlist_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-sm wishlist-btn fw-bold mt-2">Add To Wishlist</button>
+                    <hr class="text-muted" style="border: none; border-top: 2px dashed #000;">
+                </form>
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                 {% if product.rating %}
                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
@@ -224,5 +240,15 @@
         myModal.addEventListener('shown.bs.modal', function () {
         myInput.focus()
         })
+    </script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var wishlistButton = document.getElementById('wishlistButton');
+            var wishlistForm = document.getElementById('wishlistForm');
+
+            wishlistButton.addEventListener('click', function() {
+                wishlistForm.style.display = wishlistForm.style.display === 'none' || wishlistForm.style.display === '' ? 'block' : 'none';
+            });
+        });
     </script>
 {% endblock %}

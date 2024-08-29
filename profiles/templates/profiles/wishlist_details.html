@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="wishlists" class="container-fluid">
+    <h1>{{ wishlist.wishlist_name }}</h1>
+    <p>Date Created: {{ wishlist.date_created }}</p>
+
+    <div class="row">
+        {% for item in wishlist_items %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    {% if item.product.image %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img class="card-img-top" src="{{ item.product.image_url }}" alt="{{ item.product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img class="card-img-top" src="{% get_media_prefix %}noimage.png" alt="{{ item.product.name }}">
+                        </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.product.name }}</h5>
+                        <p class="card-text">£{{ item.product.price }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No items in this wishlist.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

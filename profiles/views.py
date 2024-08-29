@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import UserProfile, Wishlist
+from .models import UserProfile, Wishlist, WishlistItem
 from .forms import UserProfileForm, CreateWishlistForm
+
+from products.models import Product
 
 from checkout.models import Order
 
@@ -85,3 +87,37 @@ def create_wishlist(request):
     }
 
     return render(request, template, context)
+
+def wishlist_details(request, wishlist_id):
+    """ 
+    Display a list of products that have been added to
+    a users wishlist. 
+    """
+    user_profile = request.user.userprofile
+    wishlist = get_object_or_404(Wishlist, id=wishlist_id, user=user_profile)
+    wishlist_items = WishlistItem.objects.filter(wishlist=wishlist)
+
+    template = 'profiles/wishlist_details.html'
+    context = {
+        'wishlist': wishlist,
+        'wishlist_items': wishlist_items,
+        'user_profile': user_profile,
+    }
+
+    return render(request, template, context)
+
+def add_to_wishlist(request, product_id, wishlist_id):
+    """ Add a product to a specific wishlist. """
+    user_profile = request.user.userprofile
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist_id = request.POST.get('wishlist_id')
+    wishlist = get_object_or_404(Wishlist, pk=wishlist_id, user=user_profile)
+
+    wishlist_item, created = WishlistItem.objects.get_or_create(wishlist=wishlist, product=product)
+
+    if created:
+        messages.success(request, f'{product.name} was successfully added to {wishlist.wishlist_name}!')
+    else:
+        messages.info(request, f'{product.name} is already saved to {wishlist.wishlist_name}!')
+
+    return redirect('product_detail', product_id=product.id)

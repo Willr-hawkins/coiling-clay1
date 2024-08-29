@@ -36,7 +36,7 @@ class CreateWishlistForm(forms.ModelForm):
     """ Create a wishlist with a chosen name. """
     class Meta:
         model = Wishlist
-        fields = ['wishlist_name']
+        fields = ['wishlist_name', 'wishlist_note']
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

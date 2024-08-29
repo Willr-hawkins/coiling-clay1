@@ -43,6 +43,8 @@ class Wishlist(models.Model):
     """
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='wishlists')
     wishlist_name = models.CharField(max_length=80)
+    # Users can add a decriptive note to their wishlist
+    wishlist_note = models.TextField(max_length=150, null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 
 

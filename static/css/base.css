@@ -194,6 +194,12 @@ input[name='q']::placeholder {
     background-color: #A39B8B;
 }
 
+.decrement-qty:disabled,
+.increment-qty:disabled {
+    background-color: #A39B8B;
+    opacity: 1;
+}
+
 #wishlistButton {
     color: #3D3D3D;
     transition: 0.3s;

@@ -103,8 +103,8 @@
             <div class="row ms-2">
                 {% for related_product in random_related_products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-2 mb-4 pt-3">
-                        <div class="card">
-                            <div class="card border-0">
+                        <div class="card h-100">
+                            <div class="card h-100 border-0">
                                 {% if product.image %}
                                     <a href="{% url 'product_detail' related_product.id %}">
                                         <img class="card-img-top" src="{{ related_product.image_url }}" alt="{{ related_product.name }}">

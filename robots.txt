@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://coiling-clay-33e330e1c084.herokuapp.com/sitemap.xml

@@ -106,7 +106,7 @@ input[name='q']::placeholder {
 
 /* 404 error page */
 #error-404-page{
-    padding-top: 160px;
+    padding-top: 350px;
     height: 991px;
     background-color: #F6F5F4;
 }
@@ -114,6 +114,11 @@ input[name='q']::placeholder {
 .error-404 h1{
     color: #A39B8B;
     font-size: 110px;
+}
+
+.error-404 hr {
+    width:50%;
+    margin:0 auto;
 }
 
 .btn-404 {

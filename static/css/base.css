@@ -104,6 +104,30 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* 404 error page */
+#error-404-page{
+    padding-top: 160px;
+    height: 991px;
+    background-color: #F6F5F4;
+}
+
+.error-404 h1{
+    color: #A39B8B;
+    font-size: 110px;
+}
+
+.btn-404 {
+    background-color: #A39B8B;
+    color: #3D3D3D;
+    transition: 0.3s;
+}
+
+.btn-404:hover {
+    background-color: #6c757d;
+    color: #F6F5F4;
+    transform: scale(1.1);
+}
+
 /* Home page */
 #shipping-message {
     background-color: #50514F;

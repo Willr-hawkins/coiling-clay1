@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="error-500-page" class="container-fluid">
+        <div class="error-500 text-center">
+            <h1>Ooops!</h1>
+            <hr class="text-muted" style="border: none; border-top: 2px dashed #000;">
+            <h3 class="my-2">500 ERROR</h3>
+            <p class="fs-3">We're sorry there has been a internal sever issue!</p>
+            <a class="btn btn-500 fw-bold" href="{% url 'home' %}">Back To Homepage</a>
+        </div>
+    </div>
+{% endblock %}

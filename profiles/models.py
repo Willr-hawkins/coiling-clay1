@@ -10,8 +10,7 @@ from products.models import Product
 class UserProfile(models.Model):
     """
     A user profile model for mantaining defualt
-    delivery information and order history and 
-    review history.
+    delivery information and order history.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)

@@ -33,8 +33,8 @@ Keyword research was conducted to gather a set of targeted keywords and long-tai
 
 ## User Stories
 
-A series of user stories where written and used to help guid the build process of this project. Here is a table of the projects user stories, split into shopper, site user and site admin based user stories:
+A series of user stories where written and used to help guide the build process of this project. This table shows the projects user stories, split into shopper, site user and site admin based user stories:
 
 ![User Stories](https://github.com/user-attachments/assets/cd6a0be3-e75e-4077-a3b5-e308e713dc45)
 
-A link to the project repository project board can be found here ~ [Coiling Clay - Project board](https://github.com/users/Willr-hawkins/projects/12)
+A link to the repository project board can be found here ~ [Coiling Clay - Project board](https://github.com/users/Willr-hawkins/projects/12)

@@ -4,7 +4,7 @@ Coiling Clay is an indepentent boutique ceramics ecommerce store, that is focuse
 
 Site users can easily add products to their cart and complete purchases. By creating an account, users unlock additional features, such as the ability to leave product reviews, comment on other users' reviews, and create wishlists for future purchases. Account holders can also view their purchase history and save shipping information, making the checkout process even smoother.
 
-[The live link for coiling clay can be found here](https://coiling-clay-33e330e1c084.herokuapp.com/)
+The live link for coiling clay can be found here ~ [Coiling Clay](https://coiling-clay-33e330e1c084.herokuapp.com/)
 
 ![Responsive mock up](https://github.com/user-attachments/assets/3c25dcb9-58e4-4ef0-91b8-ea4940b5d25b)
 
@@ -23,3 +23,18 @@ Site users can easily add products to their cart and complete purchases. By crea
 - ElefantSQL ~ Postgres database
 - Stipe ~ Handle payments
 - AWS (Amazon Web Services) ~ Holds staic and media files for production
+
+
+## Keyword research
+
+Keyword research was conducted to gather a set of targeted keywords and long-tail keywords for this project, aimed to target and provide valuable insight for the target audience.
+
+![keyword research](https://github.com/user-attachments/assets/949041a9-9682-45b8-b806-59b4ebf4866f)
+
+## User Stories
+
+A series of user stories where written and used to help guid the build process of this project. Here is a table of the projects user stories, split into shopper, site user and site admin based user stories:
+
+![User Stories](https://github.com/user-attachments/assets/cd6a0be3-e75e-4077-a3b5-e308e713dc45)
+
+A link to the project repository project board can be found here ~ [Coiling Clay - Project board](https://github.com/users/Willr-hawkins/projects/12)

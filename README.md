@@ -178,6 +178,25 @@ The checkout page consists of two sections one section for the order summary, wh
 
 ![Checkout page](https://github.com/user-attachments/assets/d19b9beb-ee31-4647-a7f4-10bafab11a21)
 
-Once a user has completed their order the order will be processed and then the user wuill be taken to their order confirmation page. This will display a breakdown of their order, a copy of this will also be sent to thier email.
+### Order confirmation page
+
+Once a user has completed their order the order will be processed and then the user wuill be taken to their order confirmation page. This will display a breakdown of their order, a copy of this will also be sent to thier email. Under the order detials is a button to take the user back to the homepage.
 
 ![Order confirmation page](https://github.com/user-attachments/assets/a6d0a7af-b998-44bd-8931-861ac52fd36e)
+
+## Additional Features
+
+### Messages
+
+Throughout the website when filling in forms or adding items to the cart ect. the user will see pop up messages from the cart icon. These messages are related to the type of messages they are (success, error, warning and info), by the colour of the banner at the top of the message. Not only do user get messages but when a user adds an item to their cart they will get a success message and within the message will be a preview of their cart.
+
+![Cart preview message](https://github.com/user-attachments/assets/475ead68-4293-4795-a101-0ceff680b18e)
+
+### Cart icon
+
+When a user first visits the site the cart icon will be black and show the cost as zero, but when they start adding products to the cart the icon will change colour and the price will update to the total of those products, this allows uses to keep up with how much they will have to spend without going to the cart preview page.
+
+#### Before products are added
+![Cart icon with no items](https://github.com/user-attachments/assets/eaab47b6-0991-440f-99ef-82b8784ff7be)
+
+![Cart icon with itemsd]()

@@ -171,3 +171,13 @@ At the bottom of the page the user will be able to see their cart total and ship
 
 #### Bottom of cart page
 ![Cart page footer](https://github.com/user-attachments/assets/628a4eb3-77f8-40d7-b40c-c3a81b9e0ff7)
+
+### Checkout page
+
+The checkout page consists of two sections one section for the order summary, where the user can see the products they have in thier order, quantities and prices. The other section is the shipping and payment detials form, if the user has saved shipping info on thier profile then the shipping details will already be filled in, otherwise they can opt to save the info once they have filled the form in. Under these two sections are two buttons one to complete order and theb other to go back to the cart preview page, there is also a red message informing the user how much they will be charged.
+
+![Checkout page](https://github.com/user-attachments/assets/d19b9beb-ee31-4647-a7f4-10bafab11a21)
+
+Once a user has completed their order the order will be processed and then the user wuill be taken to their order confirmation page. This will display a breakdown of their order, a copy of this will also be sent to thier email.
+
+![Order confirmation page](https://github.com/user-attachments/assets/a6d0a7af-b998-44bd-8931-861ac52fd36e)

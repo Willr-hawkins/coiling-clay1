@@ -184,6 +184,16 @@ Once a user has completed their order the order will be processed and then the u
 
 ![Order confirmation page](https://github.com/user-attachments/assets/a6d0a7af-b998-44bd-8931-861ac52fd36e)
 
+### Error pages
+
+On the website there are custom 404 error and 500 error pages both consisting of a message explaining the issue to the user, along with a button to take them back to the homepage. This ensurse there is a consistent theme throught the whole wesbite and to keep users engaged.
+
+#### 404 Error
+![404 error](https://github.com/user-attachments/assets/95aea7c1-3950-46ed-a5ae-acd8992175df)
+
+#### 500 Error
+![500 error](https://github.com/user-attachments/assets/c31eae1d-c2e7-42c7-8e77-9e9a4cf0c345)
+
 ## Additional Features
 
 ### Messages

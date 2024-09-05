@@ -199,4 +199,15 @@ When a user first visits the site the cart icon will be black and show the cost 
 #### Before products are added
 ![Cart icon with no items](https://github.com/user-attachments/assets/eaab47b6-0991-440f-99ef-82b8784ff7be)
 
-![Cart icon with itemsd]()
+#### After products are added
+![Cart icon with itemsd](https://github.com/user-attachments/assets/d7420548-5f1c-4d7c-b8de-f5f6bcff30bb)
+
+### Ratings
+
+By defualt when a product is added to the store the rating is set to none, but when users start to leave reviews on it the rating will start to change. The rating will be an average of all reviews left on that product, and it will automatically update when reviews are created and removed. This ensures that site users are always up to date with products.
+
+#### Defualt rating
+![No rating](https://github.com/user-attachments/assets/e10fa792-4f7b-4b4c-a830-cedc8765ed37)
+
+#### With reviews
+![Rating](https://github.com/user-attachments/assets/f037ec0e-3cd2-4e86-a953-cedb25f4e26b)

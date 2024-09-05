@@ -233,3 +233,40 @@ This website was developed using gitpod workspaces and has been deployed via her
 - Then enable automatic deployments.
 - Once that is set up click deploy and heroku will build the application using the specified buildpack and dependencies.
 - Once the build process is complete, the URL can be used to access the deployed application.
+
+## Testing
+
+### Manual Testing
+
+#### Testing Links:
+
+- Coiling Clay logo ~ Ensured it takes the user to the homepage.
+- Shop Now button ~ Ensures the button takes the user to the products page with all products shown.
+- Navigation links ~ Esnured the shop navigation links take the user to the specific page related to the link (Example: Mugs link takes the user to the products page with only the products in the mugs category preseneted).
+- Log in, sign up, log out ~ Tested that all these links take the user to the correct page with the correct form presented.
+- My profile ~ Ensured that when the user uses this link the correct page is shown with the correct information related to their acocunt.
+- Wishlist ~ Ensured this link shows the correct wishlist page with all the wishlist's related to the users account.
+- Product Managment ~ Ensured that this link is only present to the superuser and takes the superuser to the correct page with the correct form.
+
+#### Functionality Testing:
+
+- Adding products to cart ~ Tested that the correct product was added to the users cart along with the correct quantity.
+- Removing or updating products in cart ~ Tested that the user can easily edit the quantity of products or reemove the product from their cart with ease.
+- Leaving a review ~ Tested that when a user creates a review the correct information is shown with their username, aswell as the rating on the product was updated correctly.
+- Editing and deleting reviews ~ Tested that when a user edits thier review the information is correctly updated, also that when a user deletes a review the rating of the product is updated correctly. Ensured that only the reviewer of the review has access to the edit or delete funcitonality.
+- Commenting on a review ~ Ensured that all logged in users that are not the reviewer have access to leave a review on a comment and that when done so, the correct information is shown only on that specific review.
+- Editing or deleting a review ~ Ensured that only the owner of the comment has access to these funcitonalities and that when a comment is edited the comment is updated and the correct information is shown, aswell the comment is effectively removed from the comment.
+- Adding shipping information/ Saving shipping information at checkout ~ Ensured that when a user has saved shipping information to their account via the my profile page that when they go to checkout the information is correctly filled in. Additionally checked that when a user opts to save shipping information at checkout that this information is correctly saved and displayed in their my profile page.
+- Creating wishlist ~ Ensured that when a user creates a wishlist it is only created on their account.
+- Adding to wishlist ~ Tested that when a product is added to a users wishlist it is only added to the wishlist they have specified.
+- Editing or deleting wishlist's ~ When a user removes a produc from a wishlist it is effectively removed. Checkout that when a user deletes a wishlist it is effecitvely removed along with any products that where saved to it.
+- Adding products ~ Esnured that only the superuser has access to add products and when a product is added it is correctly dispalyed on the products page.
+- Editing or deleting products ~ Ensured that only the superuser has access to these links and that when a product is edited the information is updated correctly, aswell as enssured that when a product is deleted it is instantly removed from the site so users cannot see it.
+
+#### Responsive Testing: 
+
+To test how repsonsive the site is multiple devices where used:
+
+- PC: Mac Mini, M2 chip, Runnning chrome, 27" monitor (1920x1080) ~ Tested that all pages are displayed correctly on desktop aswell as used chrome dev-tools to test the responsiviness on all sized screens.
+- Tablet: Ipad Air, M1 chip, Running Safari, 10.9" display (2360x1640) ~ Tested all pages are displayed correctly on tablet in both portrait and landscape modes.
+- Phone: Iphone 15 pro, running safari, 6.1" display (2532x1170) ~ Tested all pages are displayed correctly on phone and it is easy to navigate the site on smaller screens.

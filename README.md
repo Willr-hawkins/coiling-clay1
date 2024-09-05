@@ -38,3 +38,62 @@ A series of user stories where written and used to help guide the build process 
 ![User Stories](https://github.com/user-attachments/assets/cd6a0be3-e75e-4077-a3b5-e308e713dc45)
 
 A link to the repository project board can be found here ~ [Coiling Clay - Project board](https://github.com/users/Willr-hawkins/projects/12)
+
+## Pages and Features
+
+### Header and footer
+
+The websites header and footer is consistent throught the whole website, the header consists of a logo which links back to the homepage, menu dropdown for naviagtion and searching funcitonality, a my account dropdown with all account funcitonality and a cart icon that will take the user to preview their cart.
+
+![Header](https://github.com/user-attachments/assets/186cbe05-a5ba-4b7e-8672-522fbd2ad0c5)
+
+![Navigation dropdown](https://github.com/user-attachments/assets/fd125768-ee58-45bb-ba5d-afadac9a193b)
+
+The footer is simple but contains some key aspects of the website, it is made up of a link to the stores facebook page for advertising and a form for users to sign up to the stores newsletter created and using mailchimp.
+
+![footer](https://github.com/user-attachments/assets/256cc4ac-2e36-4bd8-a8f6-c00d88f7c715)
+
+#### Account Functionality
+All account funcitonality for signing up and logging in is done using allauth!
+
+For new site users the account dropdown will contain two links one for logging in and one for signing up. These links will take the user to the relevant forms.
+
+![New user account drop down](https://github.com/user-attachments/assets/3de07023-7a01-4826-a984-4348b6e371f6)
+
+### Log in page
+![Log in form](https://github.com/user-attachments/assets/1063292e-f5ea-439d-b297-a146202c5e31)
+
+Once a user has logged in to their account the account dropdown will have changed, they will have access to the My profile link, wishlist link and sign out link. Using the My profile link will take the user to a page that contains a form for them to fill in their defualt shipping information to their account, aswell as a section for their order history.
+Using the wishlist link will take the user to a page that will hold a list of the users created wishlist aswell as a button to add new wishlists. When clicking the add wishlist link a popup form will be displayed.
+
+![Logged in user account dropdown](https://github.com/user-attachments/assets/e3e5fc7a-f19a-4291-9612-3519cfc88815)
+
+### My profile page
+![My profile page](https://github.com/user-attachments/assets/e5990efb-93a9-488a-9e5b-59a6e07dfaf7)
+
+### Wishlists page
+![Wishlist page](https://github.com/user-attachments/assets/4ff70652-4b4f-4b54-83e4-a3aaad38099f)
+
+![Wishlist popup form](https://github.com/user-attachments/assets/c4b608d3-c30c-4743-931b-ff2718aa6d52)
+
+Clicking on the view button on a wishlist will take the user to a page that contains all products they have added to that particular wishlist, form there they can remove the item formthe wishlist, click the link to see the reviews on that product and quickly add it to their basket for an effecient and easy checkout. Along with the a small header section containing a button to take them back to their wishlist page, the wishlist title, a wishlist comment if the user added one and the date the wishlist was created.
+
+![Wishlist detail page](https://github.com/user-attachments/assets/5e8b656e-16be-4eb4-aaaf-67c0dcbfe87d)
+
+### Superuser account funcitonality
+If the logged in user is the super user then they will also have gained the product management link. Using this link will take the super user to a page with a form allowing them to add new prodcuts to the store.
+
+![Super user account dropdown](https://github.com/user-attachments/assets/1be6909e-1ba2-40e0-9df7-20b45c66ba51)
+
+![Product management page](https://github.com/user-attachments/assets/b793aa0b-6591-4c2a-94f0-52c7ead0dd43)
+
+### Sign up page
+![Sign up page](https://github.com/user-attachments/assets/a34d0026-611e-457d-9c43-c8dc0e624f25)
+
+### Home page
+
+The home page for this project consits of a hero image of one of the stores products which contains a button that user can click to take them to the stores collection of products, at the top of the page there is a banner lettting users know how much to spend to get free shipping. Below this is a brief description of the store and their values.
+
+![Home page hero image](https://github.com/user-attachments/assets/ec88323b-8713-472a-b476-9afe80ef8ebd)
+
+![Home page description](https://github.com/user-attachments/assets/ee54a796-07fc-49fe-a016-d0116b74273f)

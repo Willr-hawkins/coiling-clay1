@@ -233,7 +233,7 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
-    <script type="text/javascript">
+    <script>
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
 
@@ -241,7 +241,7 @@
         myInput.focus()
         })
     </script>
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             var wishlistButton = document.getElementById('wishlistButton');
             var wishlistForm = document.getElementById('wishlistForm');

@@ -63,7 +63,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
+<script>
     const myModal = document.getElementById('myModal')
     const myInput = document.getElementById('myInput')
 
@@ -71,7 +71,7 @@
         myInput.focus()
     })
 </script>
-<script type="text/javascript">
+<script>
     var toastElements = document.querySelectorAll('.toast');
       toastElements.forEach(function (toastElement) {
           var toast = new bootstrap.Toast(toastElement);

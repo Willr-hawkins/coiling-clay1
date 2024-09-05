@@ -2,6 +2,7 @@ from django.test import TestCase
 
 from .forms import OrderForm
 
+
 class TestOderForm(TestCase):
     """ Test Order form for validation. """
 
@@ -25,14 +26,14 @@ class TestOderForm(TestCase):
         """ Test order form when invalid. """
 
         order_form = OrderForm({
-            'full_name': '', #Required
-            'email': '', #Required
-            'phone_number': '', #Required
-            'street_address1': '', #Required
+            'full_name': '',  # Required
+            'email': '',  # Required
+            'phone_number': '',  # Required
+            'street_address1': '',  # Required
             'street_address2': 'anywhere',
             'town_or_city': 'anywhere',
             'postcode': '12345',
-            'country': '', #Required
+            'country': '',  # Required
             'county': ' anywhere',
         })
         self.assertFalse(order_form.is_valid(), msg='Order form is vlaid.')

@@ -500,3 +500,16 @@ Automatic testing has also been used to test the all_products view and the produ
 When using the command 'python3 manage.py test' in the terminal all tests passed:
 
 ![Automatic testing](https://github.com/user-attachments/assets/53514ae7-d469-4fd3-b7da-c4072abdfadc)
+
+## Validation
+
+### The W3C Markup validation service
+![W3C HTML validation](https://github.com/user-attachments/assets/728ab8a7-c29a-44c2-ac9f-b657980c57dd)
+
+### The W3C CSS validation service
+![W3C CSS validation](https://github.com/user-attachments/assets/edbe1048-934a-4e4d-973e-637e3d5c5464)
+
+### CI python linter
+
+Tested all python files and ensured they all passed!
+![CI python linter](https://github.com/user-attachments/assets/92760649-076b-4839-8118-5b96c15f3543)

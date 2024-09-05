@@ -3,6 +3,7 @@ from django.test import TestCase
 from .forms import ProductForm, ReviewForm, CommentForm
 from .models import Category
 
+
 class TestProductForm(TestCase):
     """ Test the product form for validation. """
     def test_form_is_valid(self):
@@ -19,7 +20,8 @@ class TestProductForm(TestCase):
             'image': '',
         })
         print(product_form.errors)
-        self.assertTrue(product_form.is_valid(), msg='Product form is invalid.')
+        self.assertTrue(product_form.is_valid(),
+                        msg='Product form is invalid.')
 
     def test_form_is_invalid(self):
         """ Test the Product form when invalid. """
@@ -33,6 +35,7 @@ class TestProductForm(TestCase):
             'image': '',
         })
         self.assertFalse(product_form.is_valid(), msg='Product form is valid.')
+
 
 class TestReviewForm(TestCase):
     """ Test the review form for validation. """
@@ -53,6 +56,7 @@ class TestReviewForm(TestCase):
         })
         self.assertFalse(review_form.is_valid(), msg='Review form is valid.')
 
+
 class TestCommentForm(TestCase):
     """ Test the comment form for validation. """
 
@@ -61,7 +65,8 @@ class TestCommentForm(TestCase):
         comment_form = CommentForm({
             'comment_body': 'I also love this mug.',
         })
-        self.assertTrue(comment_form.is_valid(), msg='Comment form is invalid.')
+        self.assertTrue(comment_form.is_valid(),
+                        msg='Comment form is invalid.')
 
     def test_form_is_invalid(self):
         """ Test the comment form when invalid. """

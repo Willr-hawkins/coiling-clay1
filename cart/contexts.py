@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -27,7 +28,7 @@ def cart_contents(request):
     else:
         shipping = 0
         free_shipping_delta = 0
-    
+
     grand_total = shipping + total
 
     context = {
@@ -40,7 +41,7 @@ def cart_contents(request):
     }
 
     # Adds grand_total to the context only when there are items in the cart,
-    # so that the cart displays as £0.00 when empty. 
+    # so that the cart displays as £0.00 when empty.
     if cart_items:
         context['grand_total'] = grand_total
 

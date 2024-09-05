@@ -7,12 +7,13 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
-from profiles.forms import  UserProfileForm
+from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from cart.contexts import cart_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -75,14 +76,16 @@ def checkout(request):
                     return redirect(reverse('cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There appears to be nothing in your cart.")
+            messages.error(request,
+                           "There appears to be nothing in your cart.")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -126,6 +129,7 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -160,7 +164,7 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
-    
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,

@@ -16,6 +16,7 @@ import random
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all the products """
 
@@ -47,9 +48,11 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request,
+                    "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -64,6 +67,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_detail(request, product_id):
     """ A view to show an individual product details """
 
@@ -71,7 +75,7 @@ def product_detail(request, product_id):
     # To get all reviews for the specific product.
     reviews = Review.objects.filter(product=product)
 
-    #Get 4 random products from the same category as product.id
+    # Get 4 random products from the same category as product.id
     related_products = Product.objects.filter(category=product.category).exclude(id=product.id)
     random_related_products = random.sample(list(related_products), min(len(related_products), 4))
 
@@ -87,6 +91,7 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def review(request, product_id):
@@ -104,16 +109,19 @@ def review(request, product_id):
             messages.success(request, 'Successfully added review!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add review, please check your form is valid.')
+            messages.error(
+                request,
+                'Failed to add review, please check your form is valid.')
     else:
         review_form = ReviewForm()
-    
+
     context = {
         'product': product,
         'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html, context')
+
 
 @login_required
 def delete_review(request, review_id):
@@ -133,6 +141,7 @@ def delete_review(request, review_id):
 
     return render(request, 'products/delete_review.html', context)
 
+
 @login_required
 def edit_review(request, review_id):
     """ Edit a review if user is review.reviewer. """
@@ -143,11 +152,13 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your review has been updated successfully.')
+            messages.success(
+             request,
+             'Your review has been updated successfully.')
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ReviewForm(instance=review)
-    
+
     context = {
         'review': review,
         'product': product,
@@ -155,6 +166,7 @@ def edit_review(request, review_id):
     }
 
     return render(request, 'products/edit_review.html', context)
+
 
 @login_required
 def add_comment(request, review_id):
@@ -174,15 +186,22 @@ def add_comment(request, review_id):
                 'products/comment_emails/comment_email_subject.txt',
                 {'review': review})
             body = render_to_string(
-                'products/comment_emails/comment_email_body.txt', 
+                'products/comment_emails/comment_email_body.txt',
                 {'review': review})
             customer_email = review.reviewer.email
-            send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [customer_email])
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [customer_email])
 
             messages.success(request, 'Comment added successfully!')
-            return redirect(reverse('product_detail', args=[review.product.id]))
+            return redirect(
+                reverse('product_detail', args=[review.product.id]))
         else:
-            messages.error(request, 'Failed to add comment. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add comment. Please ensure the form is valid.')
     else:
         comment_form = CommentForm()
 
@@ -193,16 +212,22 @@ def add_comment(request, review_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def delete_comment(request, comment_id):
     """ Delete a comment if user is comment.commenter. """
-    comment = get_object_or_404(Comments, id=comment_id, commenter=request.user)
+    comment = get_object_or_404(
+        Comments,
+        id=comment_id,
+        commenter=request.user)
     review = comment.review
     product = review.product
 
     if request.method == 'POST':
         comment.delete()
-        messages.success(request, 'You have successfully deleted your comment.')
+        messages.success(
+            request,
+            'You have successfully deleted your comment.')
         return redirect(reverse('product_detail', args=[product.id]))
 
     context = {
@@ -211,10 +236,14 @@ def delete_comment(request, comment_id):
 
     return render(request, 'products/delete_comment.html', context)
 
+
 @login_required
 def edit_comment(request, comment_id):
     """ Edit comment if user is comment.commenter. """
-    comment = get_object_or_404(Comments, id=comment_id, commenter=request.user)
+    comment = get_object_or_404(
+        Comments,
+        id=comment_id,
+        commenter=request.user)
     review = comment.review
     product = review.product
 
@@ -222,7 +251,9 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your comment has been updated successfully.')
+            messages.success(
+                request,
+                'Your comment has been updated successfully.')
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = CommentForm(instance=comment)
@@ -235,6 +266,7 @@ def edit_comment(request, comment_id):
     }
 
     return render(request, 'products/edit_comment.html', context)
+
 
 @login_required
 def add_product(request):
@@ -250,16 +282,19 @@ def add_product(request):
             messages.success(request, 'Successfully added product to store!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add produc, please check the form is valid.')
+            messages.error(
+                request,
+                'Failed to add produc, please check the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -276,7 +311,9 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully updated {product.name}.')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, f'Attempt to edit {product.name} has failed, please ensure the form is valid!')
+            messages.error(
+                request,
+                f'Attempt to edit {product.name} has failed, please ensure the form is valid!')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are about to edit {product.name}.')
@@ -288,6 +325,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):

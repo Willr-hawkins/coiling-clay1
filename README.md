@@ -90,6 +90,16 @@ If the logged in user is the super user then they will also have gained the prod
 ### Sign up page
 ![Sign up page](https://github.com/user-attachments/assets/a34d0026-611e-457d-9c43-c8dc0e624f25)
 
+Once a user has filled in the sign up form they will be taken to page asking them to confirm their email. They will be sent an email to the email used to sign up and from their they can use the link in the email which will take them back to the website on a new page allowing them to confirm the email.
+
+![Confirm email page](https://github.com/user-attachments/assets/7f94c556-28dd-4eb3-8e0b-027547f0a0dc)
+
+#### Confirmation email
+![Confirmation email](https://github.com/user-attachments/assets/7f3b1ea0-4b8a-4650-bd7a-14d264174bbd)
+
+#### Confirmation page from email
+![Confirmed email page](https://github.com/user-attachments/assets/88defda5-a831-4044-b76e-b162caee9bab)
+
 ### Home page
 
 The home page for this project consits of a hero image of one of the stores products which contains a button that user can click to take them to the stores collection of products, at the top of the page there is a banner lettting users know how much to spend to get free shipping. Below this is a brief description of the store and their values.
@@ -97,3 +107,26 @@ The home page for this project consits of a hero image of one of the stores prod
 ![Home page hero image](https://github.com/user-attachments/assets/ec88323b-8713-472a-b476-9afe80ef8ebd)
 
 ![Home page description](https://github.com/user-attachments/assets/ee54a796-07fc-49fe-a016-d0116b74273f)
+
+### Products page
+
+The products page for this webiste consists of a series of cards, with each card containing an individual product with its product image, product name, price and rating.
+
+![Product page](https://github.com/user-attachments/assets/875d2b9c-6a6b-4904-964e-25230bfbf903)
+
+This page can be filtered in different ways the first way is by using the sort by dropdown on the page itself, using this users can sort the products by name, price and rating. The second way user can filter this page is by using the category links in the header menu section, clicking on a particular category will take the user to the prodcut page but with only the products from that category. The last way to filter this page is via the search bar in the header menu section, from here users can search for a specific think (e.g. blue mug) and only the results from that search will be shown.
+
+#### Sort by dropdown
+![Page filter dropdown](https://github.com/user-attachments/assets/04d483f3-4b12-4fed-8df8-448fe0cb177c)
+
+#### Navigation links
+![Navigation links](https://github.com/user-attachments/assets/02818106-ac00-46c0-8c7c-21c5f1f2c3d4)
+
+#### Search bar
+![Search bar](https://github.com/user-attachments/assets/2e8751c0-a682-4622-9358-4e5ab06d919d)
+
+#### Super user additions
+
+For a logged in super user the product cards on the product page will have two additional links one for editing and one for deleting, allowing the superuser to easily manage products for the site.
+
+![super user product card](https://github.com/user-attachments/assets/d1eaa760-21f5-4b2a-9752-20e35f9e64db)

@@ -130,3 +130,27 @@ This page can be filtered in different ways the first way is by using the sort b
 For a logged in super user the product cards on the product page will have two additional links one for editing and one for deleting, allowing the superuser to easily manage products for the site.
 
 ![super user product card](https://github.com/user-attachments/assets/d1eaa760-21f5-4b2a-9752-20e35f9e64db)
+
+### Product detail page
+
+When a user clicks on a product on the products page they will be taken to new page for that specific product, this page contains some additonal information about the product aswell as functionality to add the product to their cart. Under the product detial section is a small section for related products, these products are chosen at random and are from the same category as the product being viewed. Under the related products section is the review section this section holds all reviews left on the product begin viewed aswell as a form for logged in users to leave their own review.
+
+#### Product details
+![Product details](https://github.com/user-attachments/assets/8cb2aa50-b4c2-4405-8eb2-452fa5e4b36a)
+
+#### Related products
+![Related products](https://github.com/user-attachments/assets/2099659d-7a94-4739-b934-5261499f59d2)
+
+#### Reviews
+![Reviews](https://github.com/user-attachments/assets/e0f7c2af-a8e5-4780-869c-0620e7b9317b)
+
+If the logged in user is the reviewer then they have the options to delete or edit their review as seen above. However if the logged in user is not the reviewer they will have the option to comment on the review. clicking the comment button will bring up a popup comment form to fill in, once created the commeneter will then also have the option to edit or delete their comment.
+
+#### Comment on review
+![comment on review](https://github.com/user-attachments/assets/1280ee94-ee87-46b0-bcad-acf30f27840b)
+
+#### Commment popup form
+![Comment form](https://github.com/user-attachments/assets/52b8fc63-f4b0-464a-8e80-99482a5af6e3)
+
+#### Comment edit or delete buttons
+![Comment edit or delete](https://github.com/user-attachments/assets/f17af9bb-93c8-4620-b949-5e407d8a40de)

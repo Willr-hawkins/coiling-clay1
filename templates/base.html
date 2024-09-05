@@ -110,6 +110,7 @@
           </ul>
         </div>
       </div>
+    </div>
   </header>
 
   <!-- Custom container for toasts -->
@@ -191,7 +192,7 @@
   </div>
 
   {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         var toastElements = document.querySelectorAll('.toast');
           toastElements.forEach(function (toastElement) {
               var toast = new bootstrap.Toast(toastElement);
@@ -200,8 +201,8 @@
     </script>
 
     <!-- MailChimp scripts -->
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script>
       (function ($) {
         window.fnames = new Array();
         window.ftypes = new Array();

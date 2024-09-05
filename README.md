@@ -154,3 +154,10 @@ If the logged in user is the reviewer then they have the options to delete or ed
 
 #### Comment edit or delete buttons
 ![Comment edit or delete](https://github.com/user-attachments/assets/f17af9bb-93c8-4620-b949-5e407d8a40de)
+
+### Cart Preview page
+
+The cart preview page can be accessed by clicking on the cart icon in the header, the purpose of this page is for users to ensure that what is in their cart is correct before proceeding to checkout. If the user doesn't have anything in their cart when they access the page they will have a message telling them nothing is in their cart and a button to take them to the producst page.
+
+#### Nothing in cart
+![Nothing in cart]()

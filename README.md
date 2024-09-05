@@ -159,5 +159,15 @@ If the logged in user is the reviewer then they have the options to delete or ed
 
 The cart preview page can be accessed by clicking on the cart icon in the header, the purpose of this page is for users to ensure that what is in their cart is correct before proceeding to checkout. If the user doesn't have anything in their cart when they access the page they will have a message telling them nothing is in their cart and a button to take them to the producst page.
 
+When the user does have items in their cart their will be a list of thier products with an image for each product, the prodcut name, product sku, price, quantity and subtotal price. Users will also be able to update their cart using the quantity field and links, they will be able to change the quantity of each individaul item or remove it from their cart completely.
+
+At the bottom of the page the user will be able to see their cart total and shipping costs if they have any and a grandtotal, aswell as buttons to securely chekout or keep shopping. If the user does have shipping costs there will be a red message telling them how much they need to spend to get free shipping.
+
 #### Nothing in cart
-![Nothing in cart]()
+![Nothing in cart](https://github.com/user-attachments/assets/c75e7b7d-07af-49b5-9770-e179b0defe44)
+
+#### Items in cart
+![Cart page](https://github.com/user-attachments/assets/4860a729-9bb9-493d-bb78-d72a85da935e)
+
+#### Bottom of cart page
+![Cart page footer](https://github.com/user-attachments/assets/628a4eb3-77f8-40d7-b40c-c3a81b9e0ff7)

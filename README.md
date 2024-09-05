@@ -221,3 +221,15 @@ By defualt when a product is added to the store the rating is set to none, but w
 
 #### With reviews
 ![Rating](https://github.com/user-attachments/assets/f037ec0e-3cd2-4e86-a953-cedb25f4e26b)
+
+## Deployment
+
+This website was developed using gitpod workspaces and has been deployed via heroku using the following steps:
+
+- Log in to Heroku and create an app with the name of the website.
+- Go to the settings tab and create the neccessary configuration variables.
+- Connect the app to the relevant GitHub repository in the deploy tab.
+- Once connected ensure the app is begin deployed by the main branch of the repository.
+- Then enable automatic deployments.
+- Once that is set up click deploy and heroku will build the application using the specified buildpack and dependencies.
+- Once the build process is complete, the URL can be used to access the deployed application.

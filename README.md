@@ -222,6 +222,19 @@ By defualt when a product is added to the store the rating is set to none, but w
 #### With reviews
 ![Rating](https://github.com/user-attachments/assets/f037ec0e-3cd2-4e86-a953-cedb25f4e26b)
 
+## Design Features
+The design of this website stays consistent throughtout, which keeps the user enganged.
+
+The font used throught the website is 'Comfortaa'.
+![Comfortaa font](https://github.com/user-attachments/assets/64c9a982-cdda-46a6-a87d-1c50882b14f5)
+
+The main colours for the site where found using [Coolors](https://coolors.co/):
+![coolors colour pallet](https://github.com/user-attachments/assets/691ae267-318f-4c14-a15c-2c86ac5c136c)
+ - #3D3D3D (Onyx) ~ Was used for the main font colour.
+ - #A39B8B (Kahki) ~ Was used for the header and footer background aswell as buttons defualt colour.
+ - #F6F5F4 (White smoke) ~ was used for the main body background colour.
+ - #6C757D (Slate grey) ~ was used for buttons when the user hovers over them.
+
 ## Deployment
 
 This website was developed using gitpod workspaces and has been deployed via heroku using the following steps:
@@ -513,3 +526,16 @@ When using the command 'python3 manage.py test' in the terminal all tests passed
 
 Tested all python files and ensured they all passed!
 ![CI python linter](https://github.com/user-attachments/assets/92760649-076b-4839-8118-5b96c15f3543)
+
+## Credits
+I have used the knowledge I have learnt from the Boutique ado course content, and have taken inspiration for the base of my project from the code used throught the walkthough.
+
+For the transtions given to the cards on the products page and buttons throught the website I used the ByteGrad youtube channel:
+
+[ByteGrad YouTube channel](https://www.youtube.com/@ByteGrad)
+
+#### The video I used for inspiration
+[Card zoom hover effect in Bootstrap 5](https://www.youtube.com/watch?v=KAHjf1Xj0SU)
+
+## Acknowledgement
+I would like to express my gratitude to Spencer Barriball for guiding me during this project and offering me support to overcome challenges I faced during completing this project.

@@ -1,6 +1,6 @@
 # Coiling Clay
 
-Coiling Clay is an indepentent boutique ceramics ecommerce store, that is focused on delivering unique, handmade ceramics that bring a touch of artistry and charm to the customers home. This website is targeted towarads individuals that value beauty and quality of handmade products.
+Coiling Clay is an independant ceramics ecommerce store, that is focused on delivering unique, handmade ceramics that bring a touch of artistry and charm to the customers home. This website is targeted towarads individuals that value the beauty and quality of handmade products.
 
 Site users can easily add products to their cart and complete purchases. By creating an account, users unlock additional features, such as the ability to leave product reviews, comment on other users' reviews, and create wishlists for future purchases. Account holders can also view their purchase history and save shipping information, making the checkout process even smoother.
 
@@ -43,27 +43,27 @@ A link to the repository project board can be found here ~ [Coiling Clay - Proje
 
 ### Header and footer
 
-The websites header and footer is consistent throught the whole website, the header consists of a logo which links back to the homepage, menu dropdown for naviagtion and searching funcitonality, a my account dropdown with all account funcitonality and a cart icon that will take the user to preview their cart.
+The websites header and footer is consistent through out the whole website. The header consists of a logo which links back to the homepage, menu dropdown for naviagtion and searching funcitionality, a my account dropdown with all account funcitionality and a cart icon that will take the user to preview their cart.
 
 ![Header](https://github.com/user-attachments/assets/186cbe05-a5ba-4b7e-8672-522fbd2ad0c5)
 
 ![Navigation dropdown](https://github.com/user-attachments/assets/fd125768-ee58-45bb-ba5d-afadac9a193b)
 
-The footer is simple but contains some key aspects of the website, it is made up of a link to the stores facebook page for advertising and a form for users to sign up to the stores newsletter created and using mailchimp.
+The footer is simple but contains some key aspects of the website. It is made up of a link to the stores Facebook page for advertising, and a form for users to sign up to the stores newsletter created and using mailchimp.
 
 ![footer](https://github.com/user-attachments/assets/256cc4ac-2e36-4bd8-a8f6-c00d88f7c715)
 
 #### Account Functionality
 All account funcitonality for signing up and logging in is done using allauth!
 
-For new site users the account dropdown will contain two links one for logging in and one for signing up. These links will take the user to the relevant forms.
+For new site users the account dropdown will contain two links: one for logging in and one for signing up. These links will take the user to the relevant forms.
 
 ![New user account drop down](https://github.com/user-attachments/assets/3de07023-7a01-4826-a984-4348b6e371f6)
 
 ### Log in page
 ![Log in form](https://github.com/user-attachments/assets/1063292e-f5ea-439d-b297-a146202c5e31)
 
-Once a user has logged in to their account the account dropdown will have changed, they will have access to the My profile link, wishlist link and sign out link. Using the My profile link will take the user to a page that contains a form for them to fill in their defualt shipping information to their account, aswell as a section for their order history.
+Once a user has logged in to their account, the account dropdown would have changed. They will have access to the My Profile link, wishlist link and sign out link. Using the My profile link will take the user to a page that contains a form for them to fill in their defualt shipping information to their account, aswell as a section for their order history.
 Using the wishlist link will take the user to a page that will hold a list of the users created wishlist aswell as a button to add new wishlists. When clicking the add wishlist link a popup form will be displayed.
 
 ![Logged in user account dropdown](https://github.com/user-attachments/assets/e3e5fc7a-f19a-4291-9612-3519cfc88815)
@@ -76,7 +76,7 @@ Using the wishlist link will take the user to a page that will hold a list of th
 
 ![Wishlist popup form](https://github.com/user-attachments/assets/c4b608d3-c30c-4743-931b-ff2718aa6d52)
 
-Clicking on the view button on a wishlist will take the user to a page that contains all products they have added to that particular wishlist, form there they can remove the item formthe wishlist, click the link to see the reviews on that product and quickly add it to their basket for an effecient and easy checkout. Along with the a small header section containing a button to take them back to their wishlist page, the wishlist title, a wishlist comment if the user added one and the date the wishlist was created.
+Clicking on the view button on a wishlist will take the user to a page that contains all products they have added to that particular wishlist. From there, they can remove the item form the wishlist, click the link to see the reviews on that product and quickly add it to their basket for an efficient checkout. Along with the a small header section containing a button to take them back to their wishlist page, the wishlist title, a wishlist comment if the user added one and the date the wishlist was created.
 
 ![Wishlist detail page](https://github.com/user-attachments/assets/5e8b656e-16be-4eb4-aaaf-67c0dcbfe87d)
 
@@ -114,7 +114,7 @@ The products page for this webiste consists of a series of cards, with each card
 
 ![Product page](https://github.com/user-attachments/assets/875d2b9c-6a6b-4904-964e-25230bfbf903)
 
-This page can be filtered in different ways the first way is by using the sort by dropdown on the page itself, using this users can sort the products by name, price and rating. The second way user can filter this page is by using the category links in the header menu section, clicking on a particular category will take the user to the prodcut page but with only the products from that category. The last way to filter this page is via the search bar in the header menu section, from here users can search for a specific think (e.g. blue mug) and only the results from that search will be shown.
+This page can be filtered in different ways. The first way is by using the sort by dropdown on the page itself. Using this, users can sort the products by name, price and rating. The second way user can filter this page is by using the category links in the header menu section. Clicking on a particular category will take the user to the prodcut page but with only the products from that category. The last way to filter this page is via the search bar in the header menu section. From here, users can search for a specific item (e.g. blue mug) and only the results from that search will be shown.
 
 #### Sort by dropdown
 ![Page filter dropdown](https://github.com/user-attachments/assets/04d483f3-4b12-4fed-8df8-448fe0cb177c)
@@ -127,13 +127,13 @@ This page can be filtered in different ways the first way is by using the sort b
 
 #### Super user additions
 
-For a logged in super user the product cards on the product page will have two additional links one for editing and one for deleting, allowing the superuser to easily manage products for the site.
+For a logged in super user, the product cards on the product page will have two additional links one for editing and one for deleting, allowing the superuser to easily manage products for the site.
 
 ![super user product card](https://github.com/user-attachments/assets/d1eaa760-21f5-4b2a-9752-20e35f9e64db)
 
 ### Product detail page
 
-When a user clicks on a product on the products page they will be taken to new page for that specific product, this page contains some additonal information about the product aswell as functionality to add the product to their cart. Under the product detial section is a small section for related products, these products are chosen at random and are from the same category as the product being viewed. Under the related products section is the review section this section holds all reviews left on the product begin viewed aswell as a form for logged in users to leave their own review.
+When a user clicks on a product on the products page, they will be taken to new page for that specific product. This page contains some additonal information about the product aswell as functionality to add the product to their cart. Under the product detail section is a small section for related products. These products are chosen at random and are from the same category as the product being viewed. Under the related products section is the review section. This section holds all reviews left on the product begin viewed aswell as a form for logged in users to leave their own review.
 
 #### Product details
 ![Product details](https://github.com/user-attachments/assets/8cb2aa50-b4c2-4405-8eb2-452fa5e4b36a)
@@ -144,7 +144,7 @@ When a user clicks on a product on the products page they will be taken to new p
 #### Reviews
 ![Reviews](https://github.com/user-attachments/assets/e0f7c2af-a8e5-4780-869c-0620e7b9317b)
 
-If the logged in user is the reviewer then they have the options to delete or edit their review as seen above. However if the logged in user is not the reviewer they will have the option to comment on the review. clicking the comment button will bring up a popup comment form to fill in, once created the commeneter will then also have the option to edit or delete their comment.
+If the logged in user is the reviewer then they have the options to delete or edit their review as seen above. However if the logged in user is not the reviewer, they will have the option to comment on the review. Clicking the comment button will bring up a popup comment form to fill in. Once created the commenter will then also have the option to edit or delete their comment.
 
 #### Comment on review
 ![comment on review](https://github.com/user-attachments/assets/1280ee94-ee87-46b0-bcad-acf30f27840b)
@@ -157,11 +157,11 @@ If the logged in user is the reviewer then they have the options to delete or ed
 
 ### Cart Preview page
 
-The cart preview page can be accessed by clicking on the cart icon in the header, the purpose of this page is for users to ensure that what is in their cart is correct before proceeding to checkout. If the user doesn't have anything in their cart when they access the page they will have a message telling them nothing is in their cart and a button to take them to the producst page.
+The cart preview page can be accessed by clicking on the cart icon in the header. The purpose of this page is for users to ensure that what is in their cart is correct before proceeding to checkout. If the user doesn't have anything in their cart when they access the page, they will have a message telling them nothing is in their cart and a button to take them to the products page.
 
-When the user does have items in their cart their will be a list of thier products with an image for each product, the prodcut name, product sku, price, quantity and subtotal price. Users will also be able to update their cart using the quantity field and links, they will be able to change the quantity of each individaul item or remove it from their cart completely.
+When the user does have items in their cart, there will be a list of their products with an image for each product: the product name, product sku, price, quantity and subtotal price. Users will also be able to update their cart using the quantity field and link. They will be able to change the quantity of each individual item or remove it from their cart completely.
 
-At the bottom of the page the user will be able to see their cart total and shipping costs if they have any and a grandtotal, aswell as buttons to securely chekout or keep shopping. If the user does have shipping costs there will be a red message telling them how much they need to spend to get free shipping.
+At the bottom of the page, the user will be able to see their cart total and shipping costs if they have any and a grandtotal, aswell as buttons to securely checkout or keep shopping. If the user does have shipping costs, there will be a red message telling them how much they need to spend to get free shipping.
 
 #### Nothing in cart
 ![Nothing in cart](https://github.com/user-attachments/assets/c75e7b7d-07af-49b5-9770-e179b0defe44)
@@ -174,19 +174,19 @@ At the bottom of the page the user will be able to see their cart total and ship
 
 ### Checkout page
 
-The checkout page consists of two sections one section for the order summary, where the user can see the products they have in thier order, quantities and prices. The other section is the shipping and payment detials form, if the user has saved shipping info on thier profile then the shipping details will already be filled in, otherwise they can opt to save the info once they have filled the form in. Under these two sections are two buttons one to complete order and theb other to go back to the cart preview page, there is also a red message informing the user how much they will be charged.
+The checkout page consists of two sections. A section for the order summary, where the user can see the products they have in thier order, quantities and prices. The other section is the shipping and payment details form. If the user has saved shipping info on their profile, then the shipping details will already be filled in. Otherwise they can opt to save the info once they have filled the form in. Under these two sections are two buttons, one to complete order and the other to go back to the cart preview page. There is also a red message informing the user how much they will be charged.
 
 ![Checkout page](https://github.com/user-attachments/assets/d19b9beb-ee31-4647-a7f4-10bafab11a21)
 
 ### Order confirmation page
 
-Once a user has completed their order the order will be processed and then the user wuill be taken to their order confirmation page. This will display a breakdown of their order, a copy of this will also be sent to thier email. Under the order detials is a button to take the user back to the homepage.
+Once a user has completed their order, the order will be processed and the user will be taken to the order confirmation page. This will display a breakdown of their order and a copy of this will also be sent to their email. Under the order detials is a button to take the user back to the homepage.
 
 ![Order confirmation page](https://github.com/user-attachments/assets/a6d0a7af-b998-44bd-8931-861ac52fd36e)
 
 ### Error pages
 
-On the website there are custom 404 error and 500 error pages both consisting of a message explaining the issue to the user, along with a button to take them back to the homepage. This ensurse there is a consistent theme throught the whole wesbite and to keep users engaged.
+On the website there are custom 404 error and 500 error pages, both consisting of a message explaining the issue to the user, along with a button to take them back to the homepage. This ensures there is a consistent theme throught the whole wesbite and to keep users engaged.
 
 #### 404 Error
 ![404 error](https://github.com/user-attachments/assets/95aea7c1-3950-46ed-a5ae-acd8992175df)
@@ -198,13 +198,13 @@ On the website there are custom 404 error and 500 error pages both consisting of
 
 ### Messages
 
-Throughout the website when filling in forms or adding items to the cart ect. the user will see pop up messages from the cart icon. These messages are related to the type of messages they are (success, error, warning and info), by the colour of the banner at the top of the message. Not only do user get messages but when a user adds an item to their cart they will get a success message and within the message will be a preview of their cart.
+Throughout the website, the user will see pop up messages from the cart icon. These messages are related to the type of messages they are (success, error, warning and info), by the colour of the banner at the top of the message. Not only do user get messages but when a user adds an item to their cart they will get a success message and within the message will be a preview of their cart.
 
 ![Cart preview message](https://github.com/user-attachments/assets/475ead68-4293-4795-a101-0ceff680b18e)
 
 ### Cart icon
 
-When a user first visits the site the cart icon will be black and show the cost as zero, but when they start adding products to the cart the icon will change colour and the price will update to the total of those products, this allows uses to keep up with how much they will have to spend without going to the cart preview page.
+When a user first visits the site the cart icon will be black and show the cost as zero. However when they start adding products to the cart, the icon will change colour and the price will update to the total of those products. This allows users to keep up with how much they will have to spend without going to the cart preview page.
 
 #### Before products are added
 ![Cart icon with no items](https://github.com/user-attachments/assets/eaab47b6-0991-440f-99ef-82b8784ff7be)
@@ -214,7 +214,7 @@ When a user first visits the site the cart icon will be black and show the cost 
 
 ### Ratings
 
-By defualt when a product is added to the store the rating is set to none, but when users start to leave reviews on it the rating will start to change. The rating will be an average of all reviews left on that product, and it will automatically update when reviews are created and removed. This ensures that site users are always up to date with products.
+By defualt, when a product is added to the store the rating is set to none, but when users start to leave reviews on it the rating will start to change. The rating will be an average of all reviews left on that product, and it will automatically update when reviews are created and removed. This ensures that site users are always up to date with products.
 
 #### Defualt rating
 ![No rating](https://github.com/user-attachments/assets/e10fa792-4f7b-4b4c-a830-cedc8765ed37)
@@ -538,4 +538,4 @@ For the transtions given to the cards on the products page and buttons throught 
 [Card zoom hover effect in Bootstrap 5](https://www.youtube.com/watch?v=KAHjf1Xj0SU)
 
 ## Acknowledgement
-I would like to express my gratitude to Spencer Barriball for guiding me during this project and offering me support to overcome challenges I faced during completing this project.
+I would like to express my gratitude to Spencer Barriball for guiding me during this project and offering me endless support to overcome challenges I endured.

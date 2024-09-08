@@ -554,6 +554,11 @@ When using the command 'python3 manage.py test' in the terminal all tests passed
 Tested all python files and ensured they all passed!
 ![CI python linter](https://github.com/user-attachments/assets/92760649-076b-4839-8118-5b96c15f3543)
 
+### JSHint
+All javascript code has been tested using JSHint and no errors were present.
+
+![JSHint](https://github.com/user-attachments/assets/abad01f3-2be7-483f-838e-cb1440b5bbdc)
+
 ## Credits
 I have used the knowledge I have learnt from the Boutique ado course content, and have taken inspiration for the base of my project from the code used throught the walkthough.
 

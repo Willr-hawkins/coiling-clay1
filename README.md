@@ -222,6 +222,14 @@ By defualt, when a product is added to the store the rating is set to none, but 
 #### With reviews
 ![Rating](https://github.com/user-attachments/assets/f037ec0e-3cd2-4e86-a953-cedb25f4e26b)
 
+### Facebook page
+
+In the footer of the website is a link to the Coiling Clay Facebook page, the purpose of the store having a Facebook page is to boost digital marketing.
+
+![Facebook page](https://github.com/user-attachments/assets/6c914908-3d75-47eb-915e-89ae00abdda3)
+
+![Facebook page](https://github.com/user-attachments/assets/94885ca3-3714-4cad-b80b-3db4086ca19d)
+
 ## Design Features
 The design of this website stays consistent throughtout, which keeps the user enganged.
 

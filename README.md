@@ -1,8 +1,8 @@
 # Coiling Clay
 
-Coiling Clay is an independant ceramics ecommerce store, that is focused on delivering unique, handmade ceramics that bring a touch of artistry and charm to the customers home. This website is targeted towarads individuals that value the beauty and quality of handmade products.
+Coiling Clay is an independant ceramics ecommerce store, that is focused on delivering unique, handmade ceramics that bring a touch of artistry and charm to the customers home. This website is targeted towards individuals that value the beauty and quality of handmade products.
 
-Site users can easily add products to their cart and complete purchases. By creating an account, users unlock additional features, such as the ability to leave product reviews, comment on other users' reviews, and create wishlists for future purchases. Account holders can also view their purchase history and save shipping information, making the checkout process even smoother.
+Site users can easily add products to their cart and complete purchases. By creating an account, users unlock additional features, such as the ability to leave product reviews, comment on other user's reviews, and create wishlists for future purchases. Account holders can also view their purchase history and save shipping information, making the checkout process even smoother.
 
 The live link for coiling clay can be found here ~ [Coiling Clay](https://coiling-clay-33e330e1c084.herokuapp.com/)
 
@@ -20,9 +20,9 @@ The live link for coiling clay can be found here ~ [Coiling Clay](https://coilin
 
 - GitHub ~ App repository
 - GitPod ~ Cloud-based development enviroment
-- ElefantSQL ~ Postgres database
-- Stipe ~ Handle payments
-- AWS (Amazon Web Services) ~ Holds staic and media files for production
+- ElephantSQL ~ Postgres database
+- Stripe ~ Handle payments
+- AWS (Amazon Web Services) ~ Holds static and media files for production
 
 
 ## Keyword research
@@ -43,7 +43,7 @@ A link to the repository project board can be found here ~ [Coiling Clay - Proje
 
 ### Header and footer
 
-The websites header and footer is consistent through out the whole website. The header consists of a logo which links back to the homepage, menu dropdown for naviagtion and searching funcitionality, a my account dropdown with all account funcitionality and a cart icon that will take the user to preview their cart.
+The websites header and footer is consistent through out the whole website. The header consists of a logo which links back to the homepage, menu dropdown for navigation and searching functionality, a my account dropdown with all account functionality and a cart icon that will take the user to preview their cart.
 
 ![Header](https://github.com/user-attachments/assets/186cbe05-a5ba-4b7e-8672-522fbd2ad0c5)
 

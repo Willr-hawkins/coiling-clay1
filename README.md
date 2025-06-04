@@ -4,7 +4,6 @@ Coiling Clay is an independant ceramics ecommerce store, that is focused on deli
 
 Site users can easily add products to their cart and complete purchases. By creating an account, users unlock additional features, such as the ability to leave product reviews, comment on other user's reviews, and create wishlists for future purchases. Account holders can also view their purchase history and save shipping information, making the checkout process even smoother.
 
-The live link for coiling clay can be found here ~ [Coiling Clay](https://coiling-clay-33e330e1c084.herokuapp.com/)
 
 ![Responsive mock up](https://github.com/user-attachments/assets/3c25dcb9-58e4-4ef0-91b8-ea4940b5d25b)
 
